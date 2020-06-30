@@ -102,7 +102,7 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
-# elevevnty output
+# eleventy output
 _site
 
 # TernJS port file
