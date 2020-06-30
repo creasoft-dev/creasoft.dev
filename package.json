@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "description": "CreaSoft.dev website",
+  "main": "index.js",
+  "repository": "git@gitlab.com:creasoft.dev/website.git",
+  "author": "<ys.ahnpark@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "moment": "^2.27.0",
+    "tailwindcss": "^1.4.6"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  }
+}
