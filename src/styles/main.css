@@ -1,14 +1,18 @@
 @tailwind base;
 @tailwind components;
-.markdown h1 {
-    @apply text-4xl text-red-400 font-bold;
+h1 {
+    @apply block text-4xl text-gray-600 font-bold;
 }
 
-.markdown a {
+p {
+    @apply block
+}
+
+a {
     @apply text-blue-300;
 }
 
-.markdown a:hover {
+a:hover {
     @apply underline;
 }
 

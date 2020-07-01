@@ -1,0 +1,47 @@
+{
+    "name": "CreaSoft.dev",
+    "rootPath": "/website",
+    "menu": {
+        "top": [{
+                "title": "About",
+                "href": "/en/pages/about"
+            },
+            {
+                "icon": "fa-git",
+                "title": "Partnership",
+                "href": "/en/pages/partnership"
+            },
+            {
+                "icon": "fa-git",
+                "title": "GitLab",
+                "href": "https://gitlab.com/creasoft.dev"
+            },
+            {
+                "icon": "fa-twitter",
+                "title": "Twitter",
+                "href": "https://twitter.com/creasoftdev"
+            },
+            {
+                "icon": "fa-youtube",
+                "title": "YouTube",
+                "href": "https://www.youtube.com/channel/"
+            }
+        ],
+        "side": [{
+                "icon": "fa-git",
+                "title": "Personal",
+                "href": "https://github.com/ysahnpark"
+            },
+            {
+                "icon": "fa-twitter",
+                "title": "Personal",
+                "href": "https://github.com/ysahnpark"
+            },
+            {
+                "icon": "fa-youtube",
+                "title": "EmpoderemosMas",
+                "href": "https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw"
+            }
+        ]
+    }
+}

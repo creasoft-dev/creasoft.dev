@@ -9,7 +9,7 @@ module.exports = eleventyConfig => {
     // Copy our static assets to the output folder
     eleventyConfig.addPassthroughCopy('css');
     eleventyConfig.addPassthroughCopy('js');
-    eleventyConfig.addPassthroughCopy('images');
+    eleventyConfig.addPassthroughCopy('src/images');
 
     // Add filter for data formatting
     eleventyConfig.addFilter('dateIso', date => {
