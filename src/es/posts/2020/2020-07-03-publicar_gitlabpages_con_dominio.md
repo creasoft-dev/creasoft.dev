@@ -1,46 +1,148 @@
 ---
-title: Publicando una pagina a GitLab pages con dominio propio
+title: Publicando una página al GitLab pages con dominio propio
 
 date: 2020-04-23
 tags: ["post", "despliegue"]
+author: Young-Suk Ahn Park
 ---
 
-# Publicando una pagina a GitLab pages con dominio propio
+<img href="/images/posts/gitlab-logo-white-rgb.png" />
 
-Existen varias opciones para publicar paginas en internet. En el principio, la publicacion de la
-paginna web consistia en crear paginas estaticas HTML y copiar los archivos a un servidor 
+# Publicando una página al GitLab pages con dominio propio
+
+NOTA antes de empezar: Ninguno de los servicios utilizados en este ejercicio conlleva costo, asi 
+que tome ventaja de los servicios!
+
+Existen varias opciones para publicar sitios web en internet. En el principio, la publicacián del
+sitio web consistía en crear páginas estáticas HTML y copiar los archivos a un servidor 
 accessible por internet.  Luego con la venida de lenguajes como perl y python, con facilidad de 
 procesar plantillas, y luego con lenguajes que procesan hipertextos como PHP, ASP y JSP, la
-tendencia era de suscribir a un hosting y publicar las paginas dinamicas en el lugar provisto 
-por el hosting.
+tendencia era de alquilar un hosting y publicar los sitios web con páginas dinámicas en un lugar 
+provisto por el proveedor de hosting.
 
-Hoy dia, se esta popularizando nuevamente el despliegue (deployment) de paginas estaticas, o
-mas bien pre-renderizadas, al una platatorma CDN (Content Delivery Network). Este nuevo 
+Hoy día, se esta popularizando nuevamente el despliegue (deployment) de páginas estaticas, o
+más bien pre-renderizadas, a una plataforma CDN (Content Delivery Network). Este nuevo 
 paradigma es llamado [JAMstack](https://jamstack.org/) por las siglas de JavaScript, APIs, 
 y Markup.
 
-En este articulo mostraremos como publicar una pagina utilizando  
+Existen varios proveedores de CDN como Netlify, Vercel entre otros. La publicacion en plan básico
+es gratuito en ambas plataformas. La otra alternativa es de publicar en el git hosting como
+GitLab o GitHub.  
+
+En este artículo mostraremos como publicar una sitio en GitLab Pages.
+Al final del ejercicio, usted tendrá una página accessible en el internet por el url
+`https://<su-cuenta>.gitlab.io/<su-projecto`.  Si tiene su propio dominio, enlazaremos el dominio 
+a la página.
+
+
 
 ## Requisitos
 - Conocimiento basico de git
 - Cuenta en [GitLab](https://gitlab.com/)
 - git instalado en su computadora
+- editor de texto, si no tiene una, sugerimis [VS Code]
 
 ## Preparando projecto en GitLab
 Lo primero que haremos es crear un projecto en GitLab.
 
-1. Dirijase el [gitlab.com](gitlab.com) y presione el boton "New Project" 
+1. Diríjase el [gitlab.com](gitlab.com) y presione el botón *New Project* 
 2. Seleccione "Create Blank Project"
-3. Introduzca los datos en el formulario, le pondremos el nombre "ejemplo-pagina" seleccione "Initialize repository with README"
-4. Presione el boton "Create Project"
+3. Introduzca los datos en el formulario. Le pondremos el nombre "ejemplo-página". Abajo, seleccione "Initialize repository with README"
+4. Presione el botón "Create Project"
+
+> Nota: Si no tiene git installado en su maquina, uste puede realizar este ejercicio utilizando 
+> el editor (Web IDE) del GitLab. 
 
 Ahora clonearemos el repositorio en el directorio local, y dirigiremos al directorio creado:
 ```bash
-$ git clone git@gitlab.com:creasoft.dev/ejemplos/ejemplo-pagina.git
-$ cd ejemplo-pagina
+$ git clone git@gitlab.com:creasoft.dev/ejemplos/ejemplo-página.git
+$ cd ejemplo-página
 ```
-Si usted le puso un nombre diferente al projeceto, reemplace `ejemplo-pagina` por el nombre que le puso.
+Si usted le puso un nombre diferente al projeceto, reemplace `ejemplo-página` por el nombre que le puso.
 
+Con un editor de texto, crea un directorio llamado `public` y dentro de ella crea un archivo 
+llamado `index.html`.
 
-## Enlazando su nombre de domino a la pagina de GitLab
+```html
+<html>
+<head>
+  <title>Ejemplo GitLab Pages</title>
+</head>
+<body>
+  <h1>Hola Mi Mundo!</h1>
+</body>
+</html>
+```
 
+Ahora en directori raíz, crea un el archivo `.gitlab-ci.yml` con el siguiente contenido.
+```yaml
+pages:
+  script:
+  - echo "Despliegue, sin operacion."
+  # Si necesita, aqui se podra ejecutar comandos shell para installar su
+  # sitio web. En el caso de; website de CreaSoft.dev, instalamos eleventy. 
+
+  artifacts:
+    paths:
+    - public
+
+  only:
+  - master
+```
+
+Ahora en el terminal agregaremos los cambios al git cometermos los cambios.
+```
+$ git add .
+$ git commit -am "Primer cometido"
+$ git push
+```
+
+Lo agradable del GitLab es que incluye CI (Integración Contínua). Tan sólo agregar un archivo en 
+el directorio raíz el archivo `.gitlab-ci.yml` GitLab automaticamente ejecutara el CI workder.
+
+Asi es commo su página se instalará en el sitio de GitLab pages.
+
+Si quiever ver los ejemplos, explore el projecto
+[https://gitlab.com/creasoft-dev/ejemplos/ejemplo-página](https://gitlab.com/creasoft-dev/ejemplos/ejemplo-página)
+
+También podrá visitar la página [https://creasoft-dev.gitlab.io/ejemplos/ejemplo-página/](https://creasoft-dev.gitlab.io/ejemplos/ejemplo-página/)
+
+## Siguentes pasos: mejoras
+Hay un montón de mejoras que se puede hacer al sitio:
+1. Utilizar un motor de [SSG (Static Site Generator)](https://www.staticgen.com/) para generar páginas desde codigos en Markdown. 
+2. Utilizar CSS framework como Bootstrap, Material UI, Tailwind, etc. 
+3. Agregar comentarios
+
+Para los curiosos, el sitio web de CreaSoft.dev utiliza:
+1. Eleventy como SSG
+     eleventy-plugin-syntaxhighlight para formatear codigos fuentes
+2. Tailwind como CSS framework
+
+## Enlazando su nombre de domino a la página de GitLab
+Esta sección mostrará cómo enlazar su dominion, ej. `mi-super-dominio.com` a la página recién publicada.
+
+### Preparando GitLab Pages para aceptar mi propio dominio.
+1. Diríjase s su proyecto en Gitlab.com, vaya al menu lateralÑ *Setting* > *Pages* y presione el botón *New Domain*
+2. Aparacerá el formulario titulado "New Pages Domain", en el campo *Domain* introduzca el nombre de su dominio, por ejemplo: `mi-super-domain.com`. Cerciórese de mantener la opción de *Certifcate*  habilitado a `Let's Encrypt` para que genere certificado SSL gratuito.
+3. Presione el botón *Create New Domain*
+4. Cuando muestre la página *Pages Domain*, copie en la memoria (Control-V) el dato que mestra en la seccion de *Verification status*
+
+### Configurando el registro de dominio para asociar en GitLab
+1. Diríjase a su registro de dominio. En mi caso utilizao domains.google.com.
+2. Vaya a la página de configuración del DNS.
+3. En el "custom resource records" introduzca 
+    - Name: -vacio-
+    - Type: `A`
+    - TTL: `1H`
+    - Data: `35.185.44.232` --> este es el IP como indicado en el [documento de GitLab](https://docs.gitlab.com/ee/user/project/pages/custom_domains_ssl_tls_certification/index.html#for-root-domains) 
+4. En el "custom resource records" introduzca 
+    - Name: -vacio-
+    - Type: `TXT`
+    - TTL: `1m`
+    - Data: <La copia del 'Verification status'>
+5. Vaya a la página de GitLab *Setting* > *Pages* y en la seccion de *Verification status* presione el botón circular a la derecha de la etiqueta roja *Unverified*. Si los pasos anteriors fueron correctos, la etiquta cambiara a color verde.
+
+Dependiendo de la syncronizacion de los DNS, pude tardar entre una a varias horas para que el 
+nombre del dominio apunte al GitLab y que el certificado se installe correctamente.
+
+¡Disfrute de su nueva presencia (sin costo) en el internet!
