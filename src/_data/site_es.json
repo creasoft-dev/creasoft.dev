@@ -11,6 +11,10 @@
                 "href": "/es/pages/sersocio"
             },
             {
+                "title": "Artículos",
+                "href": "/es/pages/articulos"
+            },
+            {
                 "icon": "fa-git",
                 "href": "https://gitlab.com/creasoft.dev"
             },
@@ -20,7 +24,6 @@
             },
             {
                 "icon": "fa-youtube",
-                "title": "YouTube",
                 "href": "https://www.youtube.com/channel/"
             }
         ],
