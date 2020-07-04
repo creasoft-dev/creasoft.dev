@@ -1,0 +1,12 @@
+---
+layout: layouts/base_es.njk
+
+---
+
+<h1>{{ title }}</h1>
+<p class="content-center">Publicado en: {{ date  | dateReadable }}, por  {{ author }}</p>
+
+{{ content | safe }}
+
+<hr />
+<p class="content-center">Publicado en: {{ date  | dateReadable }}, por  {{ author }}</p>

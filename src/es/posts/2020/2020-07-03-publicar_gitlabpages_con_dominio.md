@@ -8,10 +8,8 @@ author: Young-Suk Ahn Park
 
 <img href="/images/posts/gitlab-logo-white-rgb.png" />
 
-# Publicando una página al GitLab pages con dominio propio
-
-NOTA antes de empezar: Ninguno de los servicios utilizados en este ejercicio conlleva costo, asi 
-que tome ventaja de los servicios!
+NOTA antes de empezar: Los servicios utilizados en este ejercicio - excepto el nombre de dominio - 
+no conlleva costo, asi que tome ventaja de los servicios!
 
 Existen varias opciones para publicar sitios web en internet. En el principio, la publicacián del
 sitio web consistía en crear páginas estáticas HTML y copiar los archivos a un servidor 
@@ -134,7 +132,7 @@ Esta sección mostrará cómo enlazar su dominion, ej. `mi-super-dominio.com` a 
     - Name: -vacio-
     - Type: `A`
     - TTL: `1H`
-    - Data: `35.185.44.232` --> este es el IP como indicado en el [documento de GitLab](https://docs.gitlab.com/ee/user/project/pages/custom_domains_ssl_tls_certification/index.html#for-root-domains) 
+    - Data: `35.185.44.232` --> este es el IP como indicado en el [documento de GitLab](https://docs.gitlab.com/ee/user/project/pages/custom_domains_ssl_tls_certification/index.html#for-both-root-and-subdomains) 
 4. En el "custom resource records" introduzca 
     - Name: -vacio-
     - Type: `TXT`
@@ -144,5 +142,7 @@ Esta sección mostrará cómo enlazar su dominion, ej. `mi-super-dominio.com` a 
 
 Dependiendo de la syncronizacion de los DNS, pude tardar entre una a varias horas para que el 
 nombre del dominio apunte al GitLab y que el certificado se installe correctamente.
+
+Espere que el URL del nuevo domain muestre `https` (notese el s de seguridad).
 
 ¡Disfrute de su nueva presencia (sin costo) en el internet!
