@@ -1,8 +1,15 @@
 ---
 title: Home
-layout: layouts/base_en.njk
+layout: layouts/base.njk
 ---
-
+<div 
+    style="background-image:
+           url('/images/humaaans.png'); 
+    height:250px;
+    background-repeat: no-repeat;
+    background-size: 50%; 
+    background-position:bottom;">&nbsp;</div>
+    
 # Are you in the business of creating software?
 
 We will be your partner!

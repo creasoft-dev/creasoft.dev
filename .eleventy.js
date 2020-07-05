@@ -7,17 +7,35 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPlugin(syntaxHighlight);
 
     // Copy our static assets to the output folder
-    eleventyConfig.addPassthroughCopy('css');
-    eleventyConfig.addPassthroughCopy('js');
+    eleventyConfig.addPassthroughCopy('src/css');
+    eleventyConfig.addPassthroughCopy('src/js');
     eleventyConfig.addPassthroughCopy('src/images');
+
+
+    // date filter (localized)
+    eleventyConfig.addFilter("formatDate", function(date, format, locale) {
+        locale = locale ? locale : "en";
+        moment.locale(locale);
+        return moment(date).format(format);
+    });
 
     // Add filter for data formatting
     eleventyConfig.addFilter('dateIso', date => {
         return moment(date).toISOString();
     });
 
-    eleventyConfig.addFilter('dateReadable', date => {
-        return moment(date).utc().format('LL'); // E.g. May 31, 2019
+    eleventyConfig.addFilter('jsonify', text => {
+        return JSON.stringify(text); // E.g. May 31, 2019
+    });
+
+    // Strip out html
+    eleventyConfig.addFilter('algExcerpt', function(text) {
+        //first remove code
+        text = text.replace(/<code class="language-.*?">.*?<\/code>/sg, '');
+        //now remove html tags
+        text = text.replace(/<.*?>/g, '');
+        //now limit to 5k
+        return text.substring(0, 8000); // Algolia's limit to 10K
     });
 
     return {

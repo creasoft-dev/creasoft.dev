@@ -1,4 +1,4 @@
 {
-    "layout": "/layouts/base_es.njk",
-    "language": "es"
+    "layout": "/layouts/base.njk",
+    "locale": "es"
 }

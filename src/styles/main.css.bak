@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-    @apply underline text-blue-500;
+    @apply underline;
 }
 
 @tailwind components;

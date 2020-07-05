@@ -1,0 +1,44 @@
+{
+    "top": [{
+            "title": "About",
+            "href": "/en/pages/about"
+        },
+        {
+            "title": "Partnership",
+            "href": "/en/pages/partnership"
+        },
+        {
+            "title": "Articles",
+            "href": "/en/pages/articles"
+        },
+        {
+            "icon": "fa-git",
+            "href": "https://gitlab.com/creasoft.dev"
+        },
+        {
+            "icon": "fa-twitter",
+            "href": "https://twitter.com/creasoftdev"
+        },
+        {
+            "icon": "fa-youtube",
+            "title": "Empodera Más",
+            "href": "https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw"
+        }
+    ],
+    "side": [{
+            "icon": "fa-git",
+            "title": "Personal",
+            "href": "https://github.com/ysahnpark"
+        },
+        {
+            "icon": "fa-twitter",
+            "title": "Personal",
+            "href": "https://github.com/ysahnpark"
+        },
+        {
+            "icon": "fa-youtube",
+            "title": "EmpoderemosMas",
+            "href": "https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw"
+        }
+    ]
+}

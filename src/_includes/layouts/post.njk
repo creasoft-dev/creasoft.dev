@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+
+---
+
+<h1>{{ title }}</h1>
+<p class="content-center">{{ site[locale].published_on }}: {{ date  | formatDate("LL", locale) }}, por  {{ author }}</p>
+
+{{ content | safe }}
+
+<hr />
+<p class="content-center">{{ site[locale].published_on }}: {{ date  | formatDate("LL", locale) }}, por  {{ author }}</p>

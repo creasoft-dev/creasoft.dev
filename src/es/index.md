@@ -1,6 +1,6 @@
 ---
 title: Inicio
-layout: layouts/page_with_posts_es.njk
+layout: layouts/page_with_posts.njk
 ---
 <div 
     style="background-image:
@@ -8,7 +8,7 @@ layout: layouts/page_with_posts_es.njk
     height:250px;
     background-repeat: no-repeat;
     background-size: 50%; 
-    background-position:bottom;">&nbsp;</div>
+    background-position:center;">&nbsp;</div>
 
 # ¿Esta en el negocio de crear soluciones con software?
 
