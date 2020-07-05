@@ -1,9 +1,9 @@
 ---
 title: Publicando una página al GitLab pages con dominio propio
 
+author: Young-Suk Ahn Park
 date: 2020-04-23
 tags: ["post", "despliegue"]
-author: Young-Suk Ahn Park
 ---
 
 <img href="/images/posts/gitlab-logo-white-rgb.png" />
@@ -18,7 +18,7 @@ procesar plantillas, y luego con lenguajes que procesan hipertextos como PHP, AS
 tendencia era de alquilar un hosting y publicar los sitios web con páginas dinámicas en un lugar 
 provisto por el proveedor de hosting.
 
-Hoy día, se esta popularizando nuevamente el despliegue (deployment) de páginas estaticas, o
+Hoy día, se esta popularizando nuevamente el despliegue (deployment) de páginas estáticas, o
 más bien pre-renderizadas, a una plataforma CDN (Content Delivery Network). Este nuevo 
 paradigma es llamado [JAMstack](https://jamstack.org/) por las siglas de JavaScript, APIs, 
 y Markup.
