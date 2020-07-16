@@ -8,7 +8,6 @@ pagination:
   reverse: true
   alias: posts
 
-description: CreaSoft.dev - Sitio para divulgar conocimientos de programacion.
 keywords: desarrollo, programacion, web, Java, JavaScript, TypeScript, contenedores, docker, kubernetes
 ---
 <div 

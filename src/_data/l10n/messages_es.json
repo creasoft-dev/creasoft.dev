@@ -1,5 +1,7 @@
 {
-    "search": "Busqueda",
+    "search": "Buscar",
     "articles": "Articulos",
-    "published_on": "Publicado en"
+    "published_on": "Publicado en",
+    "by": "por",
+    "edit_on_git": "Editar en Git"
 }

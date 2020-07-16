@@ -1,15 +1,8 @@
 ---
 title: Home
-layout: layouts/page_with_posts.njk
+layout: layouts/base.njk
 
-pagination:
-  data: collections.posts_en
-  size: 10
-  reverse: true
-  alias: posts
-
-description: Developer's knowledge sharing site.
-keywords: Development, programming, Java, JavaScript, TypeScript, Python, HTML, CSS
+keywords: HTML, CSS, JavaScript
 ---
 <div 
     style="background-image:

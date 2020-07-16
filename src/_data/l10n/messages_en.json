@@ -1,5 +1,7 @@
 {
     "search": "Search",
     "articles": "Articles",
-    "published_on": "Published on"
+    "published_on": "Published on",
+    "by": "by",
+    "edit_on_git": "Edit on Git"
 }

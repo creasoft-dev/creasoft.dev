@@ -1,5 +1,8 @@
+require('dotenv').config();
 const moment = require('moment');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
+const site = require('./src/_data/site');
 
 moment.locale('en');
 
@@ -24,6 +27,7 @@ module.exports = eleventyConfig => {
         return moment(date).toISOString();
     });
 
+
     eleventyConfig.addFilter('jsonify', text => {
         return JSON.stringify(text); // E.g. May 31, 2019
     });
@@ -38,7 +42,18 @@ module.exports = eleventyConfig => {
         return text.substring(0, 8000); // Algolia's limit to 10K
     });
 
+    // For each language, create collection of posts with given language
+    site.langs.map(langEntry => {
+        eleventyConfig.addCollection(`posts_${langEntry.id}`, function(collectionApi) {
+            return collectionApi.getFilteredByTag("post").filter(function(item) {
+                return item.data.locale === langEntry.id
+            });
+        });
+    });
+
+
     return {
+        pathPrefix: process.env.WEB_PATH_PREFIX || '',
         dir: { input: 'src', output: '_site' }
     };
 

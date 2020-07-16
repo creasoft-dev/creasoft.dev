@@ -24,11 +24,17 @@ The site content is under `./src`.
 ```
 
 ## Serving the site Locally
+For running locally
 ```
-$ ELEVENTY_ENV=development yarn serve:eleventy
+$ ELEVENTY_ENV=development yarn build && ELEVENTY_ENV=development yarn serve:eleventy
+```
+For building
+```
 $ ELEVENTY_ENV=production yarn build
-# or just
-$ ELEVENTY_ENV=production yarn build && ELEVENTY_ENV=development yarn serve:eleventy
+```
+For pushing entris to Algolia index
+```
+$ yarn algolia:push 
 ```
 
 

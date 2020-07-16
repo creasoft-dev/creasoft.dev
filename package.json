@@ -1,16 +1,25 @@
 {
     "name": "CreaSoft.dev",
-    "version": "0.0.1",
     "description": "CreaSoft.dev website",
+    "homepage": "https://gitlab.com/creasoft-dev/website",
+    "keywords": [
+        "eleventy",
+        "website",
+        "ssg"
+    ],
+    "version": "0.0.1",
     "main": "src/index.js",
-    "repository": "git@gitlab.com:creasoft.dev/website.git",
     "author": "Young-Suk Ahn Park<ys.ahnpark@gmail.com>",
     "license": "MIT",
+    "repository": "git@gitlab.com:creasoft.dev/website.git",
     "devDependencies": {
         "@11ty/eleventy": "^0.11.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+        "algoliasearch": "^4.3.0",
+        "autocomplete.js": "^0.37.1",
         "autoprefixer": "^9.8.4",
         "css-loader": "^3.6.0",
+        "dotenv": "^8.2.0",
         "mini-css-extract-plugin": "^0.9.0",
         "moment": "^2.27.0",
         "npm-run-all": "^4.1.5",
@@ -27,6 +36,7 @@
         "serve": "npm-run-all clean --parallel serve:*",
         "build:webpack": "webpack --mode production",
         "build:eleventy": "eleventy",
-        "build": "run-s clean build:*"
+        "build": "run-s clean build:*",
+        "algolia:push": "node ./pipeline/algolia-push.js"
     }
 }

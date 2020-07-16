@@ -15,10 +15,9 @@ const site = {
 
     // Branding
     name: "CreaSoft.dev",
-    logoUrl: "/images/CreaSoft.dev-logo.png",
+    logoUrl: "/images/logo.png",
     faviconUrl: "/images/logo.ico",
     googleTagId: "", // use environment variable, see bottom of this file
-
     // Active languages
     langs: [{
             "id": "es",
@@ -31,10 +30,7 @@ const site = {
             "id": "ko",
             "name": "한국어"
         }
-    ],
-
-    // locale message bundle:
-    // _t is for translation
+    ]
     en: {
         menu: menu_en,
         _t: messages_en

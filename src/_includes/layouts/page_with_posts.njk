@@ -1,10 +1,11 @@
 ---
 layout: layouts/base.njk
-pagination:
-  data: collections.post
-  size: 10
-  reverse: true
-  alias: posts
+# Use the below pattern
+# pagination:
+#  data: collections.posts_$LOCALE
+#  size: 10
+#  reverse: true
+#  alias: posts
 ---
 
 {{ content | safe }}
@@ -12,11 +13,10 @@ pagination:
 
 <hr />
 <h2 class="leading-normal break-words" >{{ site[locale].articles }}</h2>
-
 {% for post in posts %}
   <article>
     <h3>
-      <a href="{{ site.rootPath }}{{ post.url | url }}">{{ post.data.title }}</a>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
     </h3>
     {{ post.date | formatDate("LL", locale) }}
   </article>
