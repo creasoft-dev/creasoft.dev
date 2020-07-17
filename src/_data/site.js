@@ -1,8 +1,10 @@
 const messages_en = require("./l10n/messages_en.json");
 const messages_es = require("./l10n/messages_es.json");
+const messages_ko = require("./l10n/messages_ko.json");
 
 const menu_en = require("./l10n/menu_en.json");
 const menu_es = require("./l10n/menu_es.json");
+const menu_ko = require("./l10n/menu_ko.json");
 
 /**
  * Get localization:
@@ -12,6 +14,7 @@ const menu_es = require("./l10n/menu_es.json");
 const site = {
     buildTime: new Date(),
     repoUrl: "https://gitlab.com/creasoft-dev/website",
+    rootUrl: "https://empoderemosmas.com",
 
     // Branding
     name: "CreaSoft.dev",
@@ -43,7 +46,15 @@ const site = {
         menu: menu_es,
         _t: messages_es
     },
+    ko: {
+        menu: menu_ko,
+        _t: messages_ko
+    }
 };
+
+if (process.env.WEB_ROOT_URL) {
+    site.rootUrl = process.env.WEB_ROOT_URL;
+}
 
 if (process.env.WEB_PATH_PREFIX) {
     site.pathPrefix = process.env.WEB_PATH_PREFIX;

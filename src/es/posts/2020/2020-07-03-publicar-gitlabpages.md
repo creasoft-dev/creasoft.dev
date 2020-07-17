@@ -2,7 +2,7 @@
 title: Publica un sitio web al GitLab pages, sin costo
 
 author: Young-Suk Ahn Park
-date: 2020-04-23
+date: 2020-07-03
 tags: ["post", "despliegue"]
 
 description: Publica un sitio web en GitLab Pages
