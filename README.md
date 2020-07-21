@@ -34,7 +34,7 @@ $ ELEVENTY_ENV=production yarn build
 ```
 For pushing entris to Algolia index
 ```
-$ yarn algolia:push 
+$ yarn algolia:tool push 
 ```
 
 

@@ -3,7 +3,7 @@ title: Para desarrollar una aplicación web ERP desde cero. ¿Qué tecnologías 
 
 author: Young-Suk Ahn Park
 date: 2020-07-20
-tags: ["pyr", "programacion"]
+tags: ["qna", "programacion"]
 
 description: Tecnologías para desarrollo de aplicaciones web tipo ERP.
 keywords: python, django
@@ -19,6 +19,8 @@ He visto que hay varias alternativas:
 3. Django plantillas con VueJS. He visto alguna documentación sobre esto. No lo he intentado aún. 
 
 Y por último, ¿si desarrollo un frontend debería optar por SPA, PWA o SSR?
+
+\- Desarrollador de ERP en plataforma de Windows en Panamá.
 
 ## Respuesta:
 La pregunta es bastante abarcadora. Si la respuesta no es suficiente o tiene pregunas adicionales, 
@@ -100,3 +102,13 @@ El Vuejs es uno de los mas sencillos en aprender.
 - Como los contenidos del ERP no necesita ser encontrado por Google o otros motores de búsquda, no hace falta poner esfuerzo en SSR.
 - Como el enfoque no es en aplicacion movil aun, tampoco hace falta poner esfuerzo en PWA.
 
+Si necesita desarrollo rápido, puede empezar con la plantilla - e.j. Django template, 
+pues no nesita implementar API, y la implementación de seguridad es mas sencilla.
+
+Es mejor empezar con algo sencillo que provee funcionalidad al usuario en corto plazo y poder 
+validar dicha funcionalidad, que tratar de implementar algo con las utlimas tecnologias y tecnicas
+que toma demasiado tiempo y pierde la oportunidad  de servir al cliente.
+
+Uso de herramientas como git y aplicación de practicas de CI-CD ayuda en la evolucion del diseño de su sistema.
+
+Espero que le haya servido la respuesta.

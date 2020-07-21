@@ -79,6 +79,6 @@ async function pushToIndex(...dataFilePaths) {
         await clearIndex();
     }
     if (doPush) {
-        await pushToIndex(`${API_PATH}/pages.json`, `${API_PATH}/posts.json`);
+        await pushToIndex(`${API_PATH}/pages.json`, `${API_PATH}/posts.json`, `${API_PATH}/qna.json`);
     }
 })();
