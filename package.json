@@ -37,6 +37,7 @@
         "build:webpack": "webpack --mode production",
         "build:eleventy": "eleventy",
         "build": "run-s clean build:*",
-        "algolia:push": "node ./pipeline/algolia-push.js"
+        "build_and_serve": "yarn build && yarn serve:eleventy",
+        "algolia:tool": "node ./tools/algolia-tool.js"
     }
 }

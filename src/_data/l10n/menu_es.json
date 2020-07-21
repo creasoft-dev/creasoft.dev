@@ -12,6 +12,11 @@
             "href": "/es/pages/articulos"
         },
         {
+            "title": "PYR",
+            "tooltip": "Preguntas y Respuestas",
+            "href": "/es/pages/pyr"
+        },
+        {
             "icon": "fa-git",
             "href": "https://gitlab.com/creasoft.dev"
         },
@@ -21,7 +26,8 @@
         },
         {
             "icon": "fa-youtube",
-            "title": "Empodera Más",
+            "tooltip": "Empoderemos Más",
+            "title": "E+",
             "href": "https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw"
         }
     ],

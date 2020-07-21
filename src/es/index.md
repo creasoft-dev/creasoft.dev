@@ -2,6 +2,8 @@
 title: Inicio
 layout: layouts/page_with_posts.njk
 
+disableComments: true
+
 pagination:
   data: collections.posts_es
   size: 10
