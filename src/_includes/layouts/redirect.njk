@@ -24,7 +24,7 @@ var locale =
     .find(language => availableLanguages.includes(language)) || "en";
 
 let redirUrl = '/' + locale + '/';
-alert("Redir to :" + redirUrl);
+console.log("Redirecting to :" + redirUrl);
 window.location.replace(redirUrl);
 </script>
 
