@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+# Use the below pattern
+# pagination:
+#  data: collections.posts_$LOCALE
+#  size: 10
+#  reverse: true
+#  alias: posts
+---
+
+{{ content | safe }}
+
+<hr class="mt-5"/>
+
+<div class="flex ">
+  <div class="bg-gray-100 w-2/4 m-2">
+
+  <h2 class="leading-normal break-words" >{{ site[locale]._t.articles }}</h2>
+{% for post in posts %}
+  <article>
+    <h3>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </h3>
+    {{ post.date | formatDate("LL", locale) }}
+  </article>
+{% endfor %}
+
+  </div>
+
+  <div class="bg-gray-100 w-2/4 m-2">
+
+  <h2 class="leading-normal break-words" >{{ site[locale]._t.qnas }}</h2>
+{% for qna in collections['qnas_' + locale] %}
+  <article>
+    <h3>
+      <a href="{{ qna.url | url }}">{{ qna.data.title }}</a>
+    </h3>
+    {{ qna.date | formatDate("LL", locale) }}
+  </article>
+{% endfor %}
+
+  </div>
+</div>
