@@ -1,10 +1,7 @@
 CreaSoft.dev website
 ====================
 
-Website built on Eleventy and Tailwindcss.
-Initial project setup based on https://statickit.com/guides/eleventy-webpack and https://statickit.com/guides/eleventy-tailwind.
-
-Template based on: https://github.com/tailwindtoolbox/Help-Article
+Website built from [Fundamenty](https://fundamenty.netlify.app), an Eleventy starter project.
 
 ## Folder Structure
 The site content is under `./src`.
@@ -37,10 +34,8 @@ For pushing entris to Algolia index
 $ yarn algolia:tool push 
 ```
 
+## Authoring Content
+Just open up your trusty code editor and start adding markdown files under `./src/{lang}/` directory.
 
-## For new Eleventy + TailwindCSS project
-```
-yarn add --dev @11ty/eleventy
-yarn add --dev webpack webpack-cli npm-run-all rimraf
-yarn add --dev tailwindcss autoprefixer mini-css-extract-plugin css-loader postcss-loader
-```
+After each new article/page, you can push it to the Algolia index for searching, see command above.
+
