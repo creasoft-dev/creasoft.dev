@@ -1,6 +1,7 @@
 {
     "search": "Buscar",
-    "articles": "Articulos",
+    "articles": "Artículos",
+    "qnas": "Preguntas y Respuestas",
     "published_on": "Publicado en",
     "by": "por",
     "edit_on_git": "Editar en Git",

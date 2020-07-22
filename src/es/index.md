@@ -1,6 +1,6 @@
 ---
 title: Inicio
-layout: layouts/page_with_posts.njk
+layout: layouts/page_with_posts_and_qna.njk
 
 disableComments: true
 

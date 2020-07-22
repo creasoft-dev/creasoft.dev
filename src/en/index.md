@@ -2,8 +2,10 @@
 title: Home
 layout: layouts/page_with_posts.njk
 
+disableComments: true
+
 pagination:
-  data: collections.posts_es
+  data: collections.posts_en
   size: 10
   reverse: true
   alias: posts

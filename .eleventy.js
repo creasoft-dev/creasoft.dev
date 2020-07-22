@@ -49,6 +49,12 @@ module.exports = eleventyConfig => {
                 return item.data.locale === langEntry.id
             });
         });
+
+        eleventyConfig.addCollection(`qnas_${langEntry.id}`, function(collectionApi) {
+            return collectionApi.getFilteredByTag("qna").filter(function(item) {
+                return item.data.locale === langEntry.id
+            });
+        });
     });
 
 

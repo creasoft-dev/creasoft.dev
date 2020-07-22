@@ -12,7 +12,8 @@ layout: layouts/base.njk
 
 
 <hr class="mt-5"/>
-<h2 class="leading-normal break-words" >{{ site[locale].articles }}</h2>
+<h2 class="leading-normal break-words" >{{ site[locale]._t.articles }}</h2>
+{% if posts %}
 {% for post in posts %}
   <article>
     <h3>
@@ -21,3 +22,4 @@ layout: layouts/base.njk
     {{ post.date | formatDate("LL", locale) }}
   </article>
 {% endfor %}
+{% endif %}

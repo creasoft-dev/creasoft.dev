@@ -170,8 +170,10 @@
  * Disqus
  */
 var disqus_config = function () {
-this.page.url = '{{ site.rootUrl }}';  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = '{{ page.url }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.language = "{{ locale }}";
+this.page.title = '{{ title }}';
+this.page.url = '{{ site.rootUrl }}{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '{{ page.fileSlug }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
