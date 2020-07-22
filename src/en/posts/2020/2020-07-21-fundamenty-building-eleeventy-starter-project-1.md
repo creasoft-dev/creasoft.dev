@@ -10,13 +10,15 @@ keywords: website, eleventy
 
 ---
 
-I first tried Eleventy for my [personal website] about a month ago, and it became my [SSG] of choice.
+> Check the Fundamenty project [live](https://creasoft-dev.github.io/fundamenty/en/), or try it locally by cloning [this repo](https://github.com/creasoft-dev/fundamenty).
+
+I first tried Eleventy for my [personal website](https://youngsukahn.com/) about a month ago, and it became my Static Site Generator (SSG) of choice.
 
 Previously at my work, I had evaluated several other SSGs: Docsify, Docusaurs, Gatsby, GitBook, Hugo, mdBook, and mkdocs. The purpose of the evaluation was to choose a tool to generate technical documentation for our code repose, following the philosophy of [Docs as Code](https://www.writethedocs.org/guide/docs-as-code/). I ended up choosing mkdocs, mainly because of the short learning curve.
 
 Eleventy was the only one on top 10 in [SSG](https://www.staticgen.com/) (at the moment of evaluation) that I hadn’t tried before, primarily because it hasn’t reached version 1.0 yet (it is still on version 0.11.0 at the moment of this writing). Nonetheless, I started bumping into articles praising Eleventy.
 
-A month ago I decided to migrate my personal page that was running on a [PHP-based CMS](http://get-simple.info/) to a GitLab Pages (Yes, free hosting! Thanks GitLab for saving me $20/month on hosting). I needed a static page, and mkdocs or any other doc=oriented SSG such as nkBook and gitbook would not do the job, its template is too restrictive. I hesitated in between Gatsby, Next with static site generation, but ultimately decided to give Eleventy a try.
+A month ago I decided to migrate my personal page that was running on a [PHP-based CMS](http://get-simple.info/) to a GitLab Pages (Yes, free hosting! Thanks GitLab for saving me $20/month on hosting). I needed a static page, and [mkdocs](https://www.mkdocs.org/) or any other documentation-oriented SSG such as nkBook and gitbook would not do the job, its template is too restrictive. I hesitated in between Gatsby, Next with static site generation, but ultimately decided to give Eleventy a try.
 
 I enjoyed it a lot!
 
@@ -26,8 +28,6 @@ Once I finished with my personal I had two other sites in the queue, including t
 
 Few requirements I had for the sites are:
 
-
-
 1. Multi-language support - I will be  publishing in English, Spanish and Korean.
 2. SEO-friendly - Generate proper meta data, and robots, sitemap.xml files
 3. Search - The pages should be searchable, part of UX requirement.
@@ -35,12 +35,9 @@ Few requirements I had for the sites are:
 5. Syntax highlighting - The content will include coding, I needed syntax highlighting for different languages.
 6. Automated deploy to GitLab Pages - Continuous Deployment for rapid cycle.
 
-I looked for [Eleventy Starter Project](https://www.11ty.dev/docs/starter/) that fits - or approximates - my requirements. I found projects with pieces but not one that met all the requirements, so I went ahead and built one: Fundamenty! For Fun and Fundamental!
+I looked for [Eleventy Starter Project](https://www.11ty.dev/docs/starter/) that fits - or approximates - my requirements. I found projects with pieces but not one that met all the requirements, so I went ahead and built one: [Fundamenty](https://creasoft-dev.github.io/fundamenty/en/)! Combining the words **Fun**, **Fundamental** and **Eleventy**!
 
-Gist:
-
-
-
+The gist:
 1. Multi-language support - through directory structure per locale
 2. SEO-friendly - Generating robots, sitemap.xml files
 3. Search - Integrating with [Algolia](https://www.algolia.com/)
@@ -48,15 +45,13 @@ Gist:
 5. Syntax highlighting - Adding [Prism](https://prismjs.com)
 6. Automated deploy to GitLab Pages - Using [GitLab-CI](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/)
 
-In addition I added
-
-
+In addition, I included
 
 7. Automated deploy to GitLab Pages - Using [GitHub Actions](https://docs.github.com/en/actions)
 8. Edit on GitLab / GitHub
 9. Comments - Integrating with [Disqus](https://disqus.com/)
 
-In this post, I will go over the implementation of each of the features mentioned above.
+In this post, I will go over the implementation of top two features.
 
 
 ## The Underlyings
@@ -381,5 +376,7 @@ if (process.env.WEB_ROOT_URL) {
 }
 ```
 
+✔️ Requirement: Basic SEO - Checked!
 
-In next articles I will explain how I address my other requirements: search, analytics, automated deployment (continuous deployment) and others.
+
+In next articles, I will explain how I addressed my other requirements: search, analytics, automated deployment (continuous deployment) and others.
