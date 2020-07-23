@@ -23,7 +23,7 @@ The site content is under `./src`.
 ## Serving the site Locally
 For running locally
 ```
-$ ELEVENTY_ENV=development yarn build && ELEVENTY_ENV=development yarn serve:eleventy
+$ yarn build_and_serve
 ```
 For building
 ```

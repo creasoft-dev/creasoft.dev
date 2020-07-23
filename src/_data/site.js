@@ -14,7 +14,7 @@ const menu_ko = require("./l10n/menu_ko.json");
 const site = {
     buildTime: new Date(),
     repoUrl: "https://gitlab.com/creasoft-dev/website",
-    rootUrl: "https://empoderemosmas.com",
+    rootUrl: "https://creasoft.dev",
 
     // Branding
     name: "CreaSoft.dev",
@@ -23,6 +23,7 @@ const site = {
     googleTagId: "", // use environment variable, see bottom of this file
 
     // Active languages
+    defaultLang: "es",
     langs: [{
             "id": "es",
             "name": "Español"

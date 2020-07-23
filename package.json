@@ -1,17 +1,17 @@
 {
     "name": "CreaSoft.dev",
     "description": "CreaSoft.dev website",
-    "homepage": "https://gitlab.com/creasoft-dev/website",
+    "homepage": "https://creasoft.dev",
     "keywords": [
         "eleventy",
         "website",
         "ssg"
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "src/index.js",
     "author": "Young-Suk Ahn Park<ys.ahnpark@gmail.com>",
     "license": "MIT",
-    "repository": "git@gitlab.com:creasoft.dev/website.git",
+    "repository": "git@github.com:creasoft-dev/creasoft.dev.git",
     "devDependencies": {
         "@11ty/eleventy": "^0.11.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
