@@ -1,0 +1,34 @@
+name: Publish to GitHub Pages
+
+on:
+  [push]
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      
+      - run: yarn install
+      - name: Build Eleventy
+        run: yarn build
+        env:
+          REPO_URL: https://gitlab.com/creasoft-dev/creasoft.dev
+          WEB_PATH_PREFIX: /creasoft.dev/
+          WEB_ROOT_URL: https://creasoft-dev.github.io/
+          GOOGLE_TAG_ID: UA-171823319-1
+          ALGOLIA_APP_ID: 5UDNUYCRCB
+          ALGOLIA_INDEX_NAME: prod_creasoft_website
+          ALGOLIA_SEARCH_API_KEY: 07f89bbff7c1fff879253c1144572cab
+          DISQUS_SITE_NAME: creasoft-dev
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./_site
