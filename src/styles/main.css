@@ -45,7 +45,7 @@ td {
 }
 
 blockquote {
-    @apply border m-1 p-2 bg-gray-200;
+    @apply m-1 p-2 bg-orange-100;
 }
 
 a {
@@ -54,6 +54,10 @@ a {
 
 a:hover {
     @apply underline text-blue-500;
+}
+
+code {
+    @apply bg-blue-100 rounded-sm
 }
 
 @tailwind components;

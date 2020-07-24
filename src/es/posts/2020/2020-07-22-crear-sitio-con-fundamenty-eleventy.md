@@ -1,5 +1,5 @@
 ---
-title: Como crear sitio à la SSG con Fundamenty y Eleventy en 10 minutos
+title: Como crear sitio à la SSG con Fundamenty y Eleventy en 15 minutos
 
 author: Young-Suk Ahn Park
 date: 2020-07-22
@@ -105,7 +105,7 @@ El resto lo deja intacto
 ```
 
 
-> Nota: NOMBRE_DEL_PROJECTO no debe de tener espacios ni caracteres especiales.
+> Nota: `NOMBRE_DEL_PROJECTO` no debe de tener espacios ni caracteres especiales.
 
 Ejecute `npm run build_and_serve` nuevamente para asegurar que `package.json` no tenga errores, y verifique que [http://localhost:8080](http://localhost:8080) despliegue correctamente. Presione Ctrl+c para parar el servicio.
 
@@ -279,7 +279,7 @@ git commit -m "Initial commit"
 git push -u origin master
 ```
 
-GitLab, al encontrar el archivo `.gitlab-ci.yml` automáticamente intentará instalar la el sitio a GitLab Pages. En este momento habrá instalado accesible a la direccion https://&lt;su-cuenta>.gitlab.io/&lt;nombre-proyecto>, pero cuando se navega a la direccion el sitio mostrara error 404 (Pagina No Encontrada). Esto se debe a que Fundamenty está redireccionando a la la ruta raíz en vez de `/&lt;nombre-proyecto>`
+GitLab, al encontrar el archivo `.gitlab-ci.yml` automáticamente intentará instalar la el sitio a GitLab Pages. En este momento habrá instalado accesible a la direccion `https://<su-cuenta>.gitlab.io/<nombre-proyecto>`, pero cuando se navega a la direccion el sitio mostrara error 404 (Pagina No Encontrada). Esto se debe a que Fundamenty está redireccionando a la la ruta raíz en vez de `<nombre-proyecto>`
 
 Para arreglar esto:
 
