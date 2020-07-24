@@ -134,7 +134,7 @@ DISQUS_SITE_NAME:
 ```
 
 
-Si sabe los valores de los variables en mayúsculas, no se preocupe, déjelos en blanco.
+Si no sabe los valores de los variables en mayúsculas, no se preocupe, déjelos en blanco.
 
 Ahora ejecute el siguiente comando:
 
@@ -144,9 +144,9 @@ npm run fundamenty:tool init
 
 El comando habrá generado dos archivos: `./src/_data/site.json.gen` y `./.env.gen`.
 
-Cambie los nombres de los archivos removiendo la extensión `.gen`, por ejemplo `./.env.gen` a `./.env`. Tendra que remover el archivo original `./src/_data/site.json`
+Cambie los nombres de los archivos removiendo la extensión `.gen`, por ejemplo `./.env.gen` a `./.env`. Tendrá que remover el archivo original `./src/_data/site.json`
 
-Al ejecutar `npm run build_and_serve`, y abrir la página, notara los cambios realizados, como el nombre.
+Al ejecutar `npm run build_and_serve`, y abrir la página, notará los cambios realizados, como el nombre.
 
 Ahora estamos listos para agregar contenidos!
 
@@ -208,7 +208,7 @@ Hurra! Mi primer artículo en Fundamenty!
 ```
 
 
-Nótese los datos envueltos entre ---. Esa sección en el archivo se llama front-matter e incluye datos utilizados por el procesador de contenidos.
+Nótese los datos envueltos entre `---`. Esa sección en el archivo se llama front-matter e incluye datos utilizados por el procesador de contenidos.
 
 Por ejemplo, el `title` es utilizado para desplegar título de la página, el `date` es utilizado para ordenar la lista de artículos, etc.
 
@@ -225,15 +225,15 @@ Eleventy básicamente funciona de la siguiente manera: Al hacer `build`,  Eleven
 
 Por ejemplo, `es/posts/mi-primer-articulo.md` ejecuta el procesador de Markdown para generar el HTML
 
-
 ```html
 <h2>Mi Articulo</h2>
 
 <p>Hurra! Mi primer artículo en Fundamenty!</p>
 ```
 
+Pero como en `es/posts/posts.json` está indicando que use el layout `layouts/post.njk` ejecutará el motor de plantilla en ella y unirá con el HTML generado del `mi-primer-articulo.md`
 
-Pero como en `es/posts/posts.json` está indicando que use el layout `layouts/post.njk` ejecutara el motor de plantilla en ella y unirá con el HTML generado del `mi-primer-articulo.md`
+Asi el Eleventy genera archivos HTML para cada uno de los archivos fuentes y los deposita en el directorio `./_site`.
 
 En fin, para cambiar el diseño, lo que hay que hacer es modificar los archivos dentro del `./src/_includes/layouts/`. La plantilla base es `base.njk`
 
