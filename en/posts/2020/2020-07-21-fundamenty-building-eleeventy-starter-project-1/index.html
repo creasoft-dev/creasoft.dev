@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head profile="http://www.w3.org/2005/10/profile">
+    
+    <title>Fundamenty - Building an Eleventy Starter Project [Part 1: Multilingual, SEO-Friendly] - CreaSoft.dev</title>
+    <meta name="description" content="Building a Searchable, Multilingual, SEO-Friendly  Eleventy Starter Project">
+    <meta name="keywords" content="website, eleventy">
+    <link rel="icon" type="image/png" href="/creasoft.dev/images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="/creasoft.dev/assets/main.css"/>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="header" class="fixed w-full z-10 top-0 bg-gray-100 border-b border-gray-400 shadow-md">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4  ">
+        <div class="pl-4 flex items-center">
+          <image src="/creasoft.dev/images/CreaSoft.dev-logo.png" alt="Logo" class="h-5 mr-1"/>
+          <a  href="/creasoft.dev/ " class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" >
+            CreaSoft.dev
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+          <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+          
+            <div class="relative pull-right pl-4 pr-4 md:pr-0">
+              <input id="searchbox" type="search" placeholder="Search" class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-purple-500 rounded py-1 px-2 pl-10 appearance-none leading-normal">
+              <div class="absolute search-icon" style="top: 0.375rem;left: 1.75rem;">
+                <img src="/creasoft.dev/images/algolia-blue-mark.png" class="h-5"/>
+              </div>
+            </div>
+          
+          </div>
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/en/pages/about" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>About</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/en/pages/partnership" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Partnership</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/en/pages/articles" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Articles</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://gitlab.com/creasoft.dev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-git fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://twitter.com/creasoftdev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-twitter fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Empoderemos Más">
+                <a href="https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-youtube fill-current "></i>E+</a>
+              </li>
+            
+          </ul>
+
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/es" class="inline-block text-xs text-gray-600 no-underline">Español</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/en" class="inline-block text-xs text-gray-600 no-underline">English</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/ko" class="inline-block text-xs text-gray-600 no-underline">한국어</a>
+              </li>
+            
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+      <div class="content w-full">
+        <h1>Fundamenty - Building an Eleventy Starter Project [Part 1: Multilingual, SEO-Friendly]</h1>
+<p class="content-center">Published on: July 21, 2020, by  Young-Suk Ahn Park</p>
+
+
+
+
+
+
+<blockquote>
+<p>Check the Fundamenty project <a href="https://creasoft-dev.github.io/fundamenty/en/">live</a>, or try it locally by cloning <a href="https://github.com/creasoft-dev/fundamenty">this repo</a>.</p>
+</blockquote>
+<p>I first tried Eleventy for my <a href="https://youngsukahn.com/">personal website</a> about a month ago, and it became my Static Site Generator (SSG) of choice.</p>
+<p>Previously at my work, I had evaluated several other SSGs: Docsify, Docusaurs, Gatsby, GitBook, Hugo, mdBook, and mkdocs. The purpose of the evaluation was to choose a tool to generate technical documentation for our code repose, following the philosophy of <a href="https://www.writethedocs.org/guide/docs-as-code/">Docs as Code</a>. I ended up choosing mkdocs, mainly because of the short learning curve.</p>
+<p>Eleventy was the only one on top 10 in <a href="https://www.staticgen.com/">SSG</a> (at the moment of evaluation) that I hadn’t tried before, primarily because it hasn’t reached version 1.0 yet (it is still on version 0.11.0 at the moment of this writing). Nonetheless, I started bumping into articles praising Eleventy.</p>
+<p>A month ago I decided to migrate my personal page that was running on a <a href="http://get-simple.info/">PHP-based CMS</a> to a GitLab Pages (Yes, free hosting! Thanks GitLab for saving me $20/month on hosting). I needed a static page, and <a href="https://www.mkdocs.org/">mkdocs</a> or any other documentation-oriented SSG such as nkBook and gitbook would not do the job, its template is too restrictive. I hesitated in between Gatsby, Next with static site generation, but ultimately decided to give Eleventy a try.</p>
+<p>I enjoyed it a lot!</p>
+<p>It is very flexible, it supports multiple template engines; it is extensible, you can just use any JS library; it is simple and elegant.</p>
+<p>Once I finished with my personal I had two other sites in the queue, including this one.</p>
+<p>Few requirements I had for the sites are:</p>
+<ol>
+<li>Multi-language support - I will be  publishing in English, Spanish and Korean.</li>
+<li>SEO-friendly - Generate proper meta data, and robots, sitemap.xml files</li>
+<li>Search - The pages should be searchable, part of UX requirement.</li>
+<li>Analytics - I need to analyze the page visit statistics, so I can use as feedback for content improvement</li>
+<li>Syntax highlighting - The content will include coding, I needed syntax highlighting for different languages.</li>
+<li>Automated deploy to GitLab Pages - Continuous Deployment for rapid cycle.</li>
+</ol>
+<p>I looked for <a href="https://www.11ty.dev/docs/starter/">Eleventy Starter Project</a> that fits - or approximates - my requirements. I found projects with pieces but not one that met all the requirements, so I went ahead and built one: <a href="https://creasoft-dev.github.io/fundamenty/en/">Fundamenty</a>! Combining the words <strong>Fun</strong>, <strong>Fundamental</strong> and <strong>Eleventy</strong>!</p>
+<p>The gist:</p>
+<ol>
+<li>Multi-language support - through directory structure per locale</li>
+<li>SEO-friendly - Generating robots, sitemap.xml files</li>
+<li>Search - Integrating with <a href="https://www.algolia.com/">Algolia</a></li>
+<li>Analytics - Integrating with <a href="https://analytics.google.com">Google Analytics</a></li>
+<li>Syntax highlighting - Adding <a href="https://prismjs.com">Prism</a></li>
+<li>Automated deploy to GitLab Pages - Using <a href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/">GitLab-CI</a></li>
+</ol>
+<p>In addition, I included</p>
+<ol start="7">
+<li>Automated deploy to GitLab Pages - Using <a href="https://docs.github.com/en/actions">GitHub Actions</a></li>
+<li>Edit on GitLab / GitHub</li>
+<li>Comments - Integrating with <a href="https://disqus.com/">Disqus</a></li>
+</ol>
+<p>In this post, I will go over the implementation of top two features.</p>
+<h2>The Underlyings</h2>
+<p>Besides Eleventy 0.11, Fundamenty uses TailwindCSS as CSS framework and Webpack for bundling.</p>
+<p>If not explicitly mentioned, I will be using Nunjuck template for Elventy.</p>
+<h3>Tailwind styles for markdown</h3>
+<p>For the Eleventy and Tailwind setup, I followed <a href="https://statickit.com/guides/eleventy-tailwind">this nice article from statickit</a>.</p>
+<p>Then I had to add the following styles for the tags generated by markdown:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> leading-relaxed text-4xl text-teal-800 font-bold<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">h2</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> leading-relaxed text-3xl text-teal-600<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">h3</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> leading-relaxed text-2xl text-teal-600<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">h3</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> leading-relaxed text-lg text-teal-600<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">p</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> leading-relaxed my-3<br><span class="token punctuation">}</span><br><br>ul</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> text-base pl-8 list-disc<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">ol</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> text-base pl-8 list-decimal<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">table</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> text-base border-gray-600<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">th</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> border py-1 px-3<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">td</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> border py-1 px-3<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">blockquote</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> border m-1 p-2 bg-gray-200<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">a</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> underline<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span><br><br><span class="token selector">a:hover</span> <span class="token punctuation">{</span><br>    <span class="token atrule"><span class="token rule">@apply</span> underline text-blue-500<span class="token punctuation">;</span></span><br><span class="token punctuation">}</span></code></pre>
+<p>Because the style applies not only to the markdown generated elements but for all other elements in the layout, I had to override those that, e.g. the navigation menu uses &lt;ul&gt;, but shouldn’t be rendered with bullets, I had to add <code>list-none</code>.</p>
+<p>I have not found a good way to add a class to all elements generated from markdown. I would need something like <a href="https://github.com/arve0/markdown-it-attrs">markdown-it-attrs</a> but that includes a class for all elements by default.</p>
+<p>I also configured tailwind.config.js to enable css purge for production build</p>
+<pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><br>    purge<span class="token operator">:</span> <span class="token punctuation">{</span><br>        enabled<span class="token operator">:</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">ELEVENTY_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>        content<span class="token operator">:</span> <span class="token punctuation">[</span><br>            <span class="token string">'./src/**/*.njk'</span><span class="token punctuation">,</span><br>            <span class="token string">'./src/**/*.md'</span><br>        <span class="token punctuation">]</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br>    <span class="token operator">...</span><br><span class="token punctuation">}</span></code></pre>
+<h3>Webpack</h3>
+<p>For Eleventy and Webpack configuration, I followed <a href="https://statickit.com/guides/eleventy-webpack">this nice guid from statickit</a>.</p>
+<p>Then I added support for <a href="https://github.com/motdotla/dotenv">dotenv</a> by modifying webpack.config.js:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">var</span> dotenv <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'dotenv'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span> path<span class="token operator">:</span> __dirname <span class="token operator">+</span> <span class="token string">'/.env'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token operator">...</span><br>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><br><span class="token operator">...</span><br>    plugins<span class="token operator">:</span> <span class="token punctuation">[</span><br>        <span class="token keyword">new</span> <span class="token class-name">MiniCssExtractPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>        <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>            <span class="token string">"process.env"</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">)</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><br>    <span class="token punctuation">]</span><span class="token punctuation">,</span><br><span class="token operator">...</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h2>Multi-language support</h2>
+<p>The most natural way of implementing multi-language support is through directory per language (I will be using language and locale interchangeably).</p>
+<p>All the source code is under <code>./src</code> directory. The multi-language relevant files and directories are shown below:</p>
+<pre class="language-text"><code class="language-text">├───{lang}       - Contents in given locale <br>│   ├ {lang}.json    - Common front matter for all the contents in Spanish <br>│   ├───pages    - Site pages<br>│   └───posts    - Site posts (e.g. blog articles)<br>├───_data        - Data/configuration file.<br>│   ├ site.js    - Main site configuration data.<br>│   ├───l10n     - localization resource bundles<br></code></pre>
+<h4>Defining the Active Languages and Resource Bundles</h4>
+<p>Under _data directory, the default 11ty’s data directory, includes sites.js data file that contains definition of list of active languages and resource bundles.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> site <span class="token operator">=</span> <span class="token punctuation">{</span><br>    <span class="token comment">// properties for Branding</span><br><br>    <span class="token comment">// Active languages</span><br>    langs<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><br>        <span class="token string">"id"</span><span class="token operator">:</span> <span class="token string">"es"</span><span class="token punctuation">,</span><br>        <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"Español"</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><br>        <span class="token string">"id"</span><span class="token operator">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span><br>        <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"English"</span><br>    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br><br>    <span class="token comment">// locale message bundle:</span><br>    <span class="token comment">// _t is for translation</span><br>    en<span class="token operator">:</span> <span class="token punctuation">{</span><br>        menu<span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./l10n/menu_en.json"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>        _t<span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./l10n/messages_en.json"</span><span class="token punctuation">)</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br>    es<span class="token operator">:</span> <span class="token punctuation">{</span><br>        menu<span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./l10n/menu_es.json"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>        _t<span class="token operator">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./l10n/messages_es.json"</span><span class="token punctuation">)</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br><br><span class="token punctuation">}</span><span class="token punctuation">;</span><br>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> site<span class="token punctuation">;</span></code></pre>
+<p>Notice that the resource bundles and messages were externalized into separate files, they are just json files located under <code>./src/_data/l10n</code>.</p>
+<p>Each language directory includes corresponding data file, with two entries: layout and locale, for example the English directory <code>en</code> includes the <code>en.json</code> file</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>    <span class="token property">"layout"</span><span class="token operator">:</span> <span class="token string">"/layouts/base.njk"</span><span class="token punctuation">,</span><br>    <span class="token property">"locale"</span><span class="token operator">:</span> <span class="token string">"en"</span><br><span class="token punctuation">}</span></code></pre>
+<h4>The Localization in Templates</h4>
+<p>Now, in the base template, you would define the language of the page</p>
+<p><code>&lt;html lang=&quot;en&quot;&gt;</code></p>
+<p>And provide links for all active languages</p>
+<pre class="language-django"><code class="language-django"><br><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">for</span> <span class="token variable">lang</span> <span class="token keyword">in</span> <span class="token variable">site</span><span class="token punctuation">.</span><span class="token variable">langs</span> <span class="token delimiter punctuation">%}</span></span><br>              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token punctuation">></span></span><br>                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token django language-django"><span class="token delimiter punctuation">{{</span> <span class="token punctuation">(</span><span class="token string">'/'</span> <span class="token operator">+</span> <span class="token variable">lang</span><span class="token punctuation">.</span><span class="token variable">id</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token variable">url</span> <span class="token delimiter punctuation">}}</span></span><span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token django language-django"><span class="token delimiter punctuation">{{</span><span class="token variable">lang</span><span class="token punctuation">.</span><span class="token variable">name</span><span class="token delimiter punctuation">}}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><br>              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><br><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">endfor</span> <span class="token delimiter punctuation">%}</span></span><br></code></pre>
+<p>Then anywhere in the template you can access the menu by locale</p>
+<pre class="language-django"><code class="language-django"><br><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">for</span> <span class="token variable">menuItem</span> <span class="token keyword">in</span> <span class="token variable">site</span><span class="token punctuation">[</span><span class="token variable">locale</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token variable">menu</span><span class="token punctuation">.</span><span class="token variable">top</span> <span class="token delimiter punctuation">%}</span></span><br>...<br><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">endfor</span> <span class="token delimiter punctuation">%}</span></span><br></code></pre>
+<p>And get the translation by locale</p>
+<pre><code>
+{{ site[locale]._t.search }}
+
+</code></pre>
+<h4>Creating Localized Content</h4>
+<p>To create a content, all you need to do is to create a file, usually markdown file with front matter in the corresponding language directory.</p>
+<p>The directory under language can be arbitrary, but the starter project includes <code>pages</code> and <code>posts</code> sub-directories. The former, <code>posts</code>, has the nature of increasing over time.</p>
+<p>You will notice that any given collection will include contents of all languages. For example, <code>collection.post</code> will include, say English and Spanish.</p>
+<p>In order to have language specific collections, <code>.eleventy.js</code> was modified to add configuration that adds collections per language. For example from collection.post will derive <code>collection.posts_en</code> and <code>collection.posts_es</code>.</p>
+<pre class="language-js"><code class="language-js">site<span class="token punctuation">.</span>langs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">langEntry</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>        eleventyConfig<span class="token punctuation">.</span><span class="token function">addCollection</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">posts_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>langEntry<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">collectionApi</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>            <span class="token keyword">return</span> collectionApi<span class="token punctuation">.</span><span class="token function">getFilteredByTag</span><span class="token punctuation">(</span><span class="token string">"post"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>                <span class="token keyword">return</span> item<span class="token punctuation">.</span>data<span class="token punctuation">.</span>locale <span class="token operator">===</span> langEntry<span class="token punctuation">.</span>id<br>            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>This allows you to render English only posts. If you want to parameterize the language, you could do:</p>
+<pre class="language-django"><code class="language-django"><br><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">set</span> <span class="token variable">posts</span> <span class="token operator">=</span> <span class="token variable">collections</span><span class="token punctuation">[</span><span class="token string">'posts_'</span> <span class="token operator">+</span> <span class="token variable">locale</span><span class="token punctuation">]</span> <span class="token delimiter punctuation">%}</span></span><br></code></pre>
+<p>I wish I could just access with <code>collections.posts[locale]</code>.</p>
+<p>In the midst of implementing my awesome multilingual Eleventy, I found out <a href="https://www.webstoemp.com/blog/multilingual-sites-eleventy/">this nice article about multilingual sites</a>, to which happened to use very similar techniques. The permalink idea in the article looks interesting.</p>
+<p>✔️ Requirement: Multilingual - Checked!</p>
+<h2>SEO-Friendly</h2>
+<p>The objective of Search Engine Optimization (SEO) is to make the page such a way that the search engines such as Google, Bing, etc. can parse it and index it with useful information increasing the chance of the page to be found by people.</p>
+<p>SEO involves many things including proper meta tagging: proper wording for the description, appropriate keywords, good title; the proper usage of headings,  etc. I am not an expert, but there is a nice tool from WooRank that analyses your page. There is also a <a href="https://www.woorank.com/en/features/woorank-extension">free chrome extension</a> that does that.</p>
+<p>One feature I have for Fundamenty is the generation of <code>robots.txt</code> and <code>sitemap.xml</code> The generation is done through the template files <code>./src/robots-txt.njk</code> and <code>./src/sitemap-xml.njk</code>.</p>
+<p>Both templates are quite simple</p>
+<p><code>./src/robots-txt.njk</code></p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">---</span><br><span class="token key atrule">permalink</span><span class="token punctuation">:</span> /robots.txt<br><span class="token key atrule">eleventyExcludeFromCollections</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token punctuation">---</span><br><span class="token key atrule">Sitemap</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//creasoft<span class="token punctuation">-</span>dev.github.io//sitemap.xml<br><br><span class="token key atrule">User-agent</span><span class="token punctuation">:</span> *<br><span class="token key atrule">Disallow</span><span class="token punctuation">:</span></code></pre>
+<p>And <code>./src/sitemap-xml.njk</code></p>
+<pre class="language-django"><code class="language-django">---<br>permalink: /sitemap.xml<br>eleventyExcludeFromCollections: true<br>---<br><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>urlset</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.sitemaps.org/schemas/sitemap/0.9<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br><br><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">for</span> <span class="token variable">page</span> <span class="token keyword">in</span> <span class="token variable">collections</span><span class="token punctuation">.</span><span class="token variable">all</span> <span class="token delimiter punctuation">%}</span></span><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">if</span> <span class="token keyword">not</span> <span class="token variable">page</span><span class="token punctuation">.</span><span class="token variable">data</span><span class="token punctuation">.</span><span class="token variable">sitemapExclude</span> <span class="token delimiter punctuation">%}</span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>loc</span><span class="token punctuation">></span></span><span class="token django language-django"><span class="token delimiter punctuation">{{</span> <span class="token variable">site</span><span class="token punctuation">.</span><span class="token variable">rootUrl</span> <span class="token delimiter punctuation">}}</span></span><span class="token django language-django"><span class="token delimiter punctuation">{{</span> <span class="token variable">page</span><span class="token punctuation">.</span><span class="token variable">url</span> <span class="token operator">|</span> <span class="token variable">url</span> <span class="token delimiter punctuation">}}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>loc</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>lastmod</span><span class="token punctuation">></span></span><span class="token django language-django"><span class="token delimiter punctuation">{{</span> <span class="token variable">page</span><span class="token punctuation">.</span><span class="token variable">date</span><span class="token punctuation">.</span><span class="token function">toISOString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token delimiter punctuation">}}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>lastmod</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>changefreq</span><span class="token punctuation">></span></span><span class="token django language-django"><span class="token delimiter punctuation">{{</span><span class="token variable">page</span><span class="token punctuation">.</span><span class="token variable">data</span><span class="token punctuation">.</span><span class="token variable">changeFreq</span><span class="token delimiter punctuation">}}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>changefreq</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span><br><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">endif</span> <span class="token delimiter punctuation">%}</span></span><span class="token django language-django"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">endfor</span> <span class="token delimiter punctuation">%}</span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>urlset</span><span class="token punctuation">></span></span></code></pre>
+<p>Both relies on the <code>rootUrl</code> data defined in <code>site.js</code></p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">WEB_ROOT_URL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    site<span class="token punctuation">.</span>rootUrl <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">WEB_ROOT_URL</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>✔️ Requirement: Basic SEO - Checked!</p>
+<p>In next articles, I will explain how I addressed my other requirements: search, analytics, automated deployment (continuous deployment) and others.</p>
+
+
+
+<hr />
+<p class="content-center">Published on: July 21, 2020, by  Young-Suk Ahn Park</p>
+
+<a href="https://gitlab.com/creasoft-dev/creasoft.dev/edit/master/./src/en/posts/2020/2020-07-21-fundamenty-building-eleeventy-starter-project-1.md">Edit on Git</a>
+
+
+      </div>
+      
+      <div class="content w-full">
+        <div id="disqus_thread"></div>
+      </div>
+      
+    </div>
+
+    <footer class="w-full bg-gray-100 mt-6 p-2 border-t-1 border-gray-300">
+      <div <div class="w-full container mx-auto flex flex-wrap items-center justify-center ">
+        <div >
+          Based on <a href="https://github.com/creasoft-dev/fundamenty">Fundamenty</a> by <a href="https://creasoft.dev/">CreaSoft.dev</a>, 
+          powered by <a href="https://www.11ty.dev/" >Eleventy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/creasoft.dev/assets/main.js"></script>
+
+    <script>
+
+      /* https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8 */
+      /* Toggle dropdown list */
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      var helpMenuDiv = document.getElementById("menu-content");
+      var helpMenu = document.getElementById("menu-toggle");
+
+      document.onclick = check;
+
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              navMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+        //Help Menu
+        if (!checkParent(target, helpMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, helpMenu)) {
+            // click on the link
+            if (helpMenuDiv.classList.contains("hidden")) {
+              helpMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              helpMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            helpMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+      }
+
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+
+/**
+ * Disqus
+ */
+var disqus_config = function () {
+this.language = "en";
+this.page.title = 'Fundamenty - Building an Eleventy Starter Project [Part 1: Multilingual, SEO-Friendly]';
+this.page.url = 'https://creasoft-dev.github.io//en/posts/2020/2020-07-21-fundamenty-building-eleeventy-starter-project-1/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'fundamenty-building-eleeventy-starter-project-1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://creasoft-dev.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+
+    </script>
+  </body>
+</html>

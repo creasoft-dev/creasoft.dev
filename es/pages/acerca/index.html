@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+  <head profile="http://www.w3.org/2005/10/profile">
+    
+    <title>A Cerca - CreaSoft.dev</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" type="image/png" href="/creasoft.dev/images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="/creasoft.dev/assets/main.css"/>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="header" class="fixed w-full z-10 top-0 bg-gray-100 border-b border-gray-400 shadow-md">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4  ">
+        <div class="pl-4 flex items-center">
+          <image src="/creasoft.dev/images/CreaSoft.dev-logo.png" alt="Logo" class="h-5 mr-1"/>
+          <a  href="/creasoft.dev/ " class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" >
+            CreaSoft.dev
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+          <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+          
+            <div class="relative pull-right pl-4 pr-4 md:pr-0">
+              <input id="searchbox" type="search" placeholder="Buscar" class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-purple-500 rounded py-1 px-2 pl-10 appearance-none leading-normal">
+              <div class="absolute search-icon" style="top: 0.375rem;left: 1.75rem;">
+                <img src="/creasoft.dev/images/algolia-blue-mark.png" class="h-5"/>
+              </div>
+            </div>
+          
+          </div>
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/acerca" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>A Cerca</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/sersocio" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Ser Socio</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/articulos" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Artículos</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Preguntas y Respuestas">
+                <a href="/creasoft.dev/es/pages/pyr" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>PyR</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://gitlab.com/creasoft.dev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-git fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://twitter.com/creasoftdev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-twitter fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Empoderemos Más">
+                <a href="https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-youtube fill-current "></i>E+</a>
+              </li>
+            
+          </ul>
+
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/es" class="inline-block text-xs text-gray-600 no-underline">Español</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/en" class="inline-block text-xs text-gray-600 no-underline">English</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/ko" class="inline-block text-xs text-gray-600 no-underline">한국어</a>
+              </li>
+            
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+      <div class="content w-full">
+        <h1>Quienes somos?</h1>
+<p>Somos un grupo de ingenieros de software con interes en divulgar el conocimientos el lengua española.</p>
+<h1>El Equipo</h1>
+<h2>Mtr. Young-Suk Ahn Park</h2>
+<p><a href="https://youngsukahn.com/">https://youngsukahn.com/</a></p>
+
+      </div>
+      
+      <div class="content w-full">
+        <div id="disqus_thread"></div>
+      </div>
+      
+    </div>
+
+    <footer class="w-full bg-gray-100 mt-6 p-2 border-t-1 border-gray-300">
+      <div <div class="w-full container mx-auto flex flex-wrap items-center justify-center ">
+        <div >
+          Based on <a href="https://github.com/creasoft-dev/fundamenty">Fundamenty</a> by <a href="https://creasoft.dev/">CreaSoft.dev</a>, 
+          powered by <a href="https://www.11ty.dev/" >Eleventy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/creasoft.dev/assets/main.js"></script>
+
+    <script>
+
+      /* https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8 */
+      /* Toggle dropdown list */
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      var helpMenuDiv = document.getElementById("menu-content");
+      var helpMenu = document.getElementById("menu-toggle");
+
+      document.onclick = check;
+
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              navMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+        //Help Menu
+        if (!checkParent(target, helpMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, helpMenu)) {
+            // click on the link
+            if (helpMenuDiv.classList.contains("hidden")) {
+              helpMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              helpMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            helpMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+      }
+
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+
+/**
+ * Disqus
+ */
+var disqus_config = function () {
+this.language = "es";
+this.page.title = 'A Cerca';
+this.page.url = 'https://creasoft-dev.github.io//es/pages/acerca/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'acerca'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://creasoft-dev.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+
+    </script>
+  </body>
+</html>

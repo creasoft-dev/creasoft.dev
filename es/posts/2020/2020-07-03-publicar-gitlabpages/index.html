@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+  <head profile="http://www.w3.org/2005/10/profile">
+    
+    <title>Publica un sitio web al GitLab pages, sin costo - CreaSoft.dev</title>
+    <meta name="description" content="Publica un sitio web en GitLab Pages">
+    <meta name="keywords" content="website, gitlab">
+    <link rel="icon" type="image/png" href="/creasoft.dev/images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="/creasoft.dev/assets/main.css"/>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="header" class="fixed w-full z-10 top-0 bg-gray-100 border-b border-gray-400 shadow-md">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4  ">
+        <div class="pl-4 flex items-center">
+          <image src="/creasoft.dev/images/CreaSoft.dev-logo.png" alt="Logo" class="h-5 mr-1"/>
+          <a  href="/creasoft.dev/ " class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" >
+            CreaSoft.dev
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+          <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+          
+            <div class="relative pull-right pl-4 pr-4 md:pr-0">
+              <input id="searchbox" type="search" placeholder="Buscar" class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-purple-500 rounded py-1 px-2 pl-10 appearance-none leading-normal">
+              <div class="absolute search-icon" style="top: 0.375rem;left: 1.75rem;">
+                <img src="/creasoft.dev/images/algolia-blue-mark.png" class="h-5"/>
+              </div>
+            </div>
+          
+          </div>
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/acerca" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>A Cerca</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/sersocio" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Ser Socio</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/articulos" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Artículos</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Preguntas y Respuestas">
+                <a href="/creasoft.dev/es/pages/pyr" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>PyR</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://gitlab.com/creasoft.dev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-git fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://twitter.com/creasoftdev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-twitter fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Empoderemos Más">
+                <a href="https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-youtube fill-current "></i>E+</a>
+              </li>
+            
+          </ul>
+
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/es" class="inline-block text-xs text-gray-600 no-underline">Español</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/en" class="inline-block text-xs text-gray-600 no-underline">English</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/ko" class="inline-block text-xs text-gray-600 no-underline">한국어</a>
+              </li>
+            
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+      <div class="content w-full">
+        <h1>Publica un sitio web al GitLab pages, sin costo</h1>
+<p class="content-center">Publicado en: 3 de julio de 2020, por  Young-Suk Ahn Park</p>
+
+
+
+
+
+
+<img href="/images/posts/gitlab-logo-white-rgb.png" />
+<blockquote>
+<p>NOTA antes de empezar: Los servicios utilizados en este ejercicio - excepto el nombre de dominio -
+no conlleva costo, así que tome ventaja de los servicios!</p>
+</blockquote>
+<p>Existen varias opciones para publicar sitios web en internet. En el principio, la publicación del
+sitio web consistía en crear páginas estáticas HTML y copiar los archivos a un servidor
+accesible por internet.  Luego con la venida de lenguajes como perl y python, con facilidad de
+procesar plantillas, y luego con lenguajes que procesan hipertextos como PHP, ASP y JSP, la
+tendencia era de alquilar un hosting y publicar los sitios web con páginas dinámicas en un lugar
+provisto por el proveedor de hosting.</p>
+<p>Hoy día, se está popularizando nuevamente el despliegue (deployment) de páginas estáticas, o
+más bien pre-renderizadas, a una plataforma CDN (Content Delivery Network). Este nuevo
+paradigma es llamado <a href="https://jamstack.org/">JAMstack</a> por las siglas de JavaScript, APIs,
+y Markup.</p>
+<p>Existen varios proveedores de CDN como Netlify, Vercel entre otros. La publicación en plan básico
+es gratuito en ambas plataformas. La otra alternativa es de publicar en el git hosting como
+GitLab o GitHub.</p>
+<p>En este artículo mostraremos cómo publicar una sitio en GitLab Pages.
+Al final del ejercicio, usted tendrá una página accesible en el internet por el url
+<code>https://&lt;su-cuenta&gt;.gitlab.io/&lt;su-proyecto&gt;</code>.  Si tiene su propio dominio, enlazaremos el dominio
+a la página.</p>
+<h2>Requisitos</h2>
+<ul>
+<li>Conocimiento básico de git</li>
+<li>Cuenta en <a href="https://gitlab.com/">GitLab</a></li>
+<li>git instalado en su computadora</li>
+<li>editor de texto, si no tiene una, sugerimos <a href="https://code.visualstudio.com/">VS Code</a></li>
+</ul>
+<h2>Preparando proyecto en GitLab</h2>
+<p>Lo primero que haremos es crear un proyecto en GitLab.</p>
+<ol>
+<li>Diríjase el <a href="gitlab.com">gitlab.com</a> y presione el botón <em>New Project</em></li>
+<li>Seleccione &quot;Create Blank Project&quot;</li>
+<li>Introduzca los datos en el formulario. Le pondremos el nombre &quot;ejemplo-página&quot;. Abajo, seleccione &quot;Initialize repository with README&quot;</li>
+<li>Presione el botón &quot;Create Project&quot;</li>
+</ol>
+<blockquote>
+<p>Nota: Si no tiene git instalado en su máquina, usted puede realizar este ejercicio utilizando
+el editor (Web IDE) del GitLab.</p>
+</blockquote>
+<p>Ahora clonearemos el repositorio en el directorio local, y dirigiremos al directorio creado:</p>
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">git</span> clone git@gitlab.com:creasoft.dev/ejemplos/ejemplo-página.git<br>$ <span class="token builtin class-name">cd</span> ejemplo-página</code></pre>
+<p>Si usted le puso un nombre diferente al proyecto, reemplace <code>ejemplo-página</code> por el nombre que le puso.</p>
+<p>Con un editor de texto, crea un directorio llamado <code>public</code> y dentro de ella crea un archivo
+llamado <code>index.html</code>.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Ejemplo GitLab Pages<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Hola Mi Mundo!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p>Ahora en directori raíz, crea un el archivo <code>.gitlab-ci.yml</code> con el siguiente contenido.</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">pages</span><span class="token punctuation">:</span><br>  <span class="token key atrule">script</span><span class="token punctuation">:</span><br>  <span class="token punctuation">-</span> echo "Despliegue<span class="token punctuation">,</span> sin operacion."<br>  <span class="token comment"># Si necesita, aqui se podra ejecutar comandos shell para instalar su</span><br>  <span class="token comment"># sitio web. En el caso de; website de CreaSoft.dev, instalamos eleventy. </span><br><br>  <span class="token key atrule">artifacts</span><span class="token punctuation">:</span><br>    <span class="token key atrule">paths</span><span class="token punctuation">:</span><br>    <span class="token punctuation">-</span> public<br><br>  <span class="token key atrule">only</span><span class="token punctuation">:</span><br>  <span class="token punctuation">-</span> master</code></pre>
+<p>Ahora en el terminal agregaremos los cambios al git cometeremos los cambios.</p>
+<pre><code>$ git add .
+$ git commit -am &quot;Primer cometido&quot;
+$ git push
+</code></pre>
+<p>Lo agradable del GitLab es que incluye CI (Integración Contínua). Tan sólo agregar un archivo en
+el directorio raíz el archivo <code>.gitlab-ci.yml</code> GitLab ejecutará automáticamente el CI worker.</p>
+<p>Así es como su página se instalará en el sitio de GitLab pages.</p>
+<p>Si quiere ver los ejemplos, explore el repositorio
+<a href="https://gitlab.com/creasoft-dev/ejemplos/ejemplo-p%C3%A1gina">https://gitlab.com/creasoft-dev/ejemplos/ejemplo-página</a></p>
+<p>También podrá visitar la página <a href="https://creasoft-dev.gitlab.io/ejemplos/ejemplo-p%C3%A1gina/">https://creasoft-dev.gitlab.io/ejemplos/ejemplo-página/</a></p>
+<h2>Pasos siguientes: mejoras</h2>
+<p>Hay un montón de mejoras que se puede hacer al sitio:</p>
+<ol>
+<li>Utilizar un motor de <a href="https://www.staticgen.com/">SSG (Static Site Generator)</a> para generar páginas desde códigos en Markdown.</li>
+<li>Utilizar CSS framework como Bootstrap, Material UI, Tailwind, etc.</li>
+<li>Agregar comentarios</li>
+</ol>
+<p>Para los curiosos, el sitio web de CreaSoft.dev utiliza:</p>
+<ol>
+<li>Eleventy como SSG
+eleventy-plugin-syntaxhighlight para formatear códigos fuentes</li>
+<li>Tailwind como CSS framework</li>
+</ol>
+<h2>Enlazando su nombre de domino a la página de GitLab</h2>
+<p>Esta sección mostrará cómo enlazar su dominio, ej. <code>mi-super-dominio.com</code> a la página recién publicada.</p>
+<h3>Preparando GitLab Pages para aceptar mi propio dominio.</h3>
+<ol>
+<li>Diríjase s su proyecto en Gitlab.com, vaya al menú lateral: <em>Setting</em> &gt; <em>Pages</em> y presione el botón <em>New Domain</em></li>
+<li>Aparecerá el formulario titulado &quot;New Pages Domain&quot;, en el campo <em>Domain</em> introduzca el nombre de su dominio, por ejemplo: <code>mi-super-domain.com</code>. Cerciórese de mantener la opción de <em>Certificate</em>  habilitado a <code>Let's Encrypt</code> para que genere certificado SSL gratuito.</li>
+<li>Presione el botón <em>Create New Domain</em></li>
+<li>Cuando muestre la página <em>Pages Domain</em>, copie en la memoria (Control-V) el dato que muestra en la sección de <em>Verification status</em></li>
+</ol>
+<h3>Configurando el registro de dominio para asociar en GitLab</h3>
+<ol>
+<li>Diríjase a su registro de dominio. En mi caso utilizo <code>domains.google.com</code>.</li>
+<li>Vaya a la página de configuración del DNS.</li>
+<li>En el &quot;custom resource records&quot; introduzca
+<ul>
+<li>Name: -vacio-</li>
+<li>Type: <code>A</code></li>
+<li>TTL: <code>1H</code></li>
+<li>Data: <code>35.185.44.232</code> --&gt; este es el IP como indicado en el <a href="https://docs.gitlab.com/ee/user/project/pages/custom_domains_ssl_tls_certification/index.html#for-both-root-and-subdomains">documento de GitLab</a></li>
+</ul>
+</li>
+<li>En el &quot;custom resource records&quot; introduzca
+<ul>
+<li>Name: -vacio-</li>
+<li>Type: <code>TXT</code></li>
+<li>TTL: <code>1m</code></li>
+<li>Data: &lt;La copia del 'Verification status'&gt;</li>
+</ul>
+</li>
+<li>Vaya a la página de GitLab <em>Setting</em> &gt; <em>Pages</em> y en la sección de <em>Verification status</em> presione el botón circular a la derecha de la etiqueta roja <em>Unverified</em>. Si los pasos anteriores fueron correctos, la etiqueta cambiará a color verde.</li>
+</ol>
+<p>Dependiendo del tiempo de sincronización de los DNS, puede tardar entre una a varias horas para que el
+nombre del dominio apunte al GitLab y que el certificado se instale correctamente.</p>
+<p>Espere que el URL del nuevo domain muestre <code>https</code> (nótese la letra <code>s</code> de seguridad).</p>
+<p>¡Disfrute de su nueva presencia (sin costo) en el internet!</p>
+
+
+
+<hr />
+<p class="content-center">Publicado en: 3 de julio de 2020, por  Young-Suk Ahn Park</p>
+
+<a href="https://gitlab.com/creasoft-dev/creasoft.dev/edit/master/./src/es/posts/2020/2020-07-03-publicar-gitlabpages.md">Editar en Git</a>
+
+
+      </div>
+      
+      <div class="content w-full">
+        <div id="disqus_thread"></div>
+      </div>
+      
+    </div>
+
+    <footer class="w-full bg-gray-100 mt-6 p-2 border-t-1 border-gray-300">
+      <div <div class="w-full container mx-auto flex flex-wrap items-center justify-center ">
+        <div >
+          Based on <a href="https://github.com/creasoft-dev/fundamenty">Fundamenty</a> by <a href="https://creasoft.dev/">CreaSoft.dev</a>, 
+          powered by <a href="https://www.11ty.dev/" >Eleventy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/creasoft.dev/assets/main.js"></script>
+
+    <script>
+
+      /* https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8 */
+      /* Toggle dropdown list */
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      var helpMenuDiv = document.getElementById("menu-content");
+      var helpMenu = document.getElementById("menu-toggle");
+
+      document.onclick = check;
+
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              navMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+        //Help Menu
+        if (!checkParent(target, helpMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, helpMenu)) {
+            // click on the link
+            if (helpMenuDiv.classList.contains("hidden")) {
+              helpMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              helpMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            helpMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+      }
+
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+
+/**
+ * Disqus
+ */
+var disqus_config = function () {
+this.language = "es";
+this.page.title = 'Publica un sitio web al GitLab pages, sin costo';
+this.page.url = 'https://creasoft-dev.github.io//es/posts/2020/2020-07-03-publicar-gitlabpages/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'publicar-gitlabpages'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://creasoft-dev.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+
+    </script>
+  </body>
+</html>

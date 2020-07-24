@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+  <head profile="http://www.w3.org/2005/10/profile">
+    
+    <title>Para desarrollar una aplicación web ERP desde cero. ¿Qué tecnologías me recomendaría utilizar? - CreaSoft.dev</title>
+    <meta name="description" content="Tecnologías para desarrollo de aplicaciones web tipo ERP.">
+    <meta name="keywords" content="python, django">
+    <link rel="icon" type="image/png" href="/creasoft.dev/images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="/creasoft.dev/assets/main.css"/>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="header" class="fixed w-full z-10 top-0 bg-gray-100 border-b border-gray-400 shadow-md">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4  ">
+        <div class="pl-4 flex items-center">
+          <image src="/creasoft.dev/images/CreaSoft.dev-logo.png" alt="Logo" class="h-5 mr-1"/>
+          <a  href="/creasoft.dev/ " class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" >
+            CreaSoft.dev
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+          <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+          
+            <div class="relative pull-right pl-4 pr-4 md:pr-0">
+              <input id="searchbox" type="search" placeholder="Buscar" class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-purple-500 rounded py-1 px-2 pl-10 appearance-none leading-normal">
+              <div class="absolute search-icon" style="top: 0.375rem;left: 1.75rem;">
+                <img src="/creasoft.dev/images/algolia-blue-mark.png" class="h-5"/>
+              </div>
+            </div>
+          
+          </div>
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/acerca" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>A Cerca</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/sersocio" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Ser Socio</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/articulos" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Artículos</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Preguntas y Respuestas">
+                <a href="/creasoft.dev/es/pages/pyr" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>PyR</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://gitlab.com/creasoft.dev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-git fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://twitter.com/creasoftdev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-twitter fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Empoderemos Más">
+                <a href="https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-youtube fill-current "></i>E+</a>
+              </li>
+            
+          </ul>
+
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/es" class="inline-block text-xs text-gray-600 no-underline">Español</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/en" class="inline-block text-xs text-gray-600 no-underline">English</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/ko" class="inline-block text-xs text-gray-600 no-underline">한국어</a>
+              </li>
+            
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+      <div class="content w-full">
+        <h1>Para desarrollar una aplicación web ERP desde cero. ¿Qué tecnologías me recomendaría utilizar?</h1>
+<p class="content-center">Publicado en: 20 de julio de 2020, por  Young-Suk Ahn Park</p>
+
+
+
+
+
+
+<h2>Más detalle de la pregunta</h2>
+<p>Estoy migrando mi aplicación desarrollado en VisualBasic para Windows a aplicación web más moderno.
+¿Qué  tecnologías me recomienda?</p>
+<p>He visto que hay varias alternativas:</p>
+<ol>
+<li>Django Rest framework. Con frontend en VueJS.</li>
+<li>Django con su sistema de plantillas. (Yo empecé utilizando jQuery, pero luego de avanzar un poco veo que no es la mejor decisión.)</li>
+<li>Django plantillas con VueJS. He visto alguna documentación sobre esto. No lo he intentado aún.</li>
+</ol>
+<p>Y por último, ¿si desarrollo un frontend debería optar por SPA, PWA o SSR?</p>
+<p>- Desarrollador de ERP en plataforma de Windows en Panamá.</p>
+<h2>Respuesta:</h2>
+<p>La pregunta es bastante abarcadora. Si la respuesta no le es suficiente o tiene preguntas adicionales,
+puede dejar comentarios y les daremos seguimiento.</p>
+<h3>Desarrollo de aplicaciones web</h3>
+<p>Empecemos con la primera pregunta. Existen muchas otras alternativas de combinacion de lenguaje
+y framework: Python+Flask, Ruby on Rails, JS+express, JS+Koa, Java/Kotlin+Spring, Scala+Play, y la lista sigue.</p>
+<p>Los factores que hay que tomar en cuenta para la decisión incluye desde conocimiento previo del
+lenguaje/framework, el ecosistema  de las librerías, el soporte de la plataforma donde se instalará
+entre otros.</p>
+<p>Pero entiendo que Python y Django son decisiones ya tomadas, que
+por cierto son buenas decisiones. Así que basaremos en esa decision.</p>
+<p>Para una aplicación ERP Web, <strong>Python+Django</strong> es una buena opción.
+Python tiene una comunidad activa con muchas librerias.</p>
+<h3>¿SPA, PWA o SSR?</h3>
+<p>Existen varios modelos de desarrollo para la parte de client (front-end):</p>
+<ul>
+<li>
+<p><strong>Single Page Application (SPA)</strong> - Aplicación de Página Única</p>
+<p>En este modelo de aplicación, el front-end, es una sóla página HTML con JavaScript, que interactua
+con el servidor para generar contenidos dinámicos.</p>
+<p>La <strong>ventaja</strong> es que la experiencia del usuario se asemeja a la de una aplicación de desktop.
+Gmail es un buen ejemplo. Muchas  de las partes de las aplicaciones son cargados dinámicamente,
+sin hacer una recarga / redirección entre página.</p>
+<p>La <strong>desventaja</strong> es que el motor de búsqueda como Google no va a poder registar la pagina, pues no
+puede analizar el contenido dinámico generadod por JS. En pocas palabras, no es optimizado
+para motores de búsqueda (No SEO). También el desarrollo es más complejo, en la parte de integracion
+por API y seguridad.</p>
+<p><strong>Technologias</strong> utilizadas en SPA include los frameworks de interfaz de usuario (IU) como
+<a href="https://reactjs.org/">React</a>, <a href="https://angular.io/">Angular</a>, <a href="https://vuejs.org/">Vue</a>, o
+<a href="https://svelte.dev/">Svelte</a> en la parte del cliente,
+y en la parte de servidor los frameworks para desarrollo basado en API, ya sea REST o
+<a href="https://graphql.org/">GraphQL</a>.</p>
+</li>
+<li>
+<p><strong>Server Side Rendering (SSR)</strong> - Rendereo en el Servidor</p>
+<p>El SSR es básicamente el metodo tradicional de uso de plantillas. Los  Server Pages como
+los Active Server Pages (ASP) o Java Server Pages (JSP). También son SSR.</p>
+<p>La <strong>ventaja</strong> de este modelo es que es amigable a los motores de búsqueda.
+Y la implmentacion es mas sencilla, no necesita API, y seguridad es menos compleja.</p>
+<p>Existe un tipo de SSR que se ha popularizado recientemente con Nodejs. El SSR <strong>isomórfico</strong> (en inglés: isomorphic).
+es el modelo en donde el motor de pantilla es uno de los framewors IU usado en SPA como React, Vue, Angular, etc.</p>
+<p>La <strong>ventaja</strong> de este modelo es que el desarrollador dispone de gran ecosistema de librerías
+y componentes del framework.</p>
+</li>
+<li>
+<p><strong>Progressive Web Application (PWA)</strong> - Aplicación Progresiva de Web</p>
+<p>Este modelo es más bien un patrón que consiste en utilizar
+(a) <strong>HTTPS</strong> para conexión segura,
+(b) JS <strong>Service Workers</strong> para funcionamiento en línea y fuera de línea, y
+(c) <strong>archivo de manifiesto</strong> para empaquetamiento y descubrimiento de la aplicación.</p>
+<p>Este modelo es muy reciente y aún no son tantos los casos de uso.</p>
+<p>Una de las <strong>ventajas</strong> es carga rápida y ejecución aun cuando la aplicación está fuera de línea.
+Los app moviles serian los mmas benficiados.</p>
+</li>
+</ul>
+<p>Tambien existe el <a href="https://webassembly.org/">WebAssembly</a> que permite cargar archivos binarios ejecutables in el navegador. Es una tecnología reciente.</p>
+<p>Para hacer más interesante, otro plano es el desarrollo de la aplicación móvil:</p>
+<ul>
+<li><strong>Nativo</strong>, e.j. Java o Kotlin en Andriod, y Swift en iOS, NativeScript, ReactNative.</li>
+<li><strong>Hibrido</strong>, e.j. Ionic, Cordova</li>
+<li><strong>Plataformas de abstracción</strong>, e.j. Xamarin</li>
+</ul>
+<h3>La recommendación</h3>
+<p>En fin, si su plan es seguir creciendo su aplicación ERP para que en un futuro sea provisto como
+servicio (Software as a Service) y con múltiples aplicaciones clientes, e.j. Web y móvil, le recomiendo que desarrolle de manera desacoplada:</p>
+<ul>
+<li>Implemente el servidor (backend) con interface API, utilizando
+Django REST Framework o Flask.</li>
+<li>Implemente el cliente (frontend) como SPA utilizando el framework UI, e.j. Vuejs (es uno de los mas simpmles en aprender).</li>
+<li>Implemente seguridad, e.j. utilizando mecanismo de Bearer token.</li>
+<li>No hace falta usar SSR, pues los contenidos del ERP deben estar protejidos y no ser encontrado por Google o por otros motores de búsqueda.</li>
+<li>Tampoco hace falta usar PWA, pues el enfoque por mientras no es en aplicación móvil.</li>
+</ul>
+<p>Si necesita desarrollo rápido, el modelo tradicional utilizacion de la plantilla - e.j. Django template,
+pues no necesita implementar API, y la implementación de seguridad es más sencilla.</p>
+<p>La otra posibilidad es empezar con una fase intermedio, utilizando framework IU como Vuejs con
+la plantilla Django. Los datos, en vez de traer por API del servidor, simplemente puede generar con la plantilla en formato JSON utilizando el filtro <a href="https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#json-script">json_script</a> de Django.
+Lo que también tendrá que hacer es evitar el conflicto del sintaxis `` que es igual
+en las dos plantillas - Django y Vuejs. No he averiguado, pero dbe haber configución para cambiar los caracteres.</p>
+<p>Es mejor empezar con algo sencillo que provee funcionalidad al usuario en corto plazo y poder
+validar dicha funcionalidad, en vez de tratar de implementar algo con las últimas tecnologías y técnicas
+que toma demasiado tiempo cual podria perder oportunidades en el mercado.</p>
+<p>Uso de herramientas como git y aplicación de prácticas de CI-CD son d mucha ayuda en la evolución del diseño de su sistema.</p>
+<p>Espero que le haya servido la respuesta.</p>
+
+
+
+<hr />
+<p class="content-center">Publicado en: 20 de julio de 2020, por  Young-Suk Ahn Park</p>
+
+<a href="https://gitlab.com/creasoft-dev/creasoft.dev/edit/master/./src/es/qna/2020/2020-07-20-tecnologias-para-desarrollo-web.md">Editar en Git</a>
+
+
+      </div>
+      
+      <div class="content w-full">
+        <div id="disqus_thread"></div>
+      </div>
+      
+    </div>
+
+    <footer class="w-full bg-gray-100 mt-6 p-2 border-t-1 border-gray-300">
+      <div <div class="w-full container mx-auto flex flex-wrap items-center justify-center ">
+        <div >
+          Based on <a href="https://github.com/creasoft-dev/fundamenty">Fundamenty</a> by <a href="https://creasoft.dev/">CreaSoft.dev</a>, 
+          powered by <a href="https://www.11ty.dev/" >Eleventy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/creasoft.dev/assets/main.js"></script>
+
+    <script>
+
+      /* https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8 */
+      /* Toggle dropdown list */
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      var helpMenuDiv = document.getElementById("menu-content");
+      var helpMenu = document.getElementById("menu-toggle");
+
+      document.onclick = check;
+
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              navMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+        //Help Menu
+        if (!checkParent(target, helpMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, helpMenu)) {
+            // click on the link
+            if (helpMenuDiv.classList.contains("hidden")) {
+              helpMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              helpMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            helpMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+      }
+
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+
+/**
+ * Disqus
+ */
+var disqus_config = function () {
+this.language = "es";
+this.page.title = 'Para desarrollar una aplicación web ERP desde cero. ¿Qué tecnologías me recomendaría utilizar?';
+this.page.url = 'https://creasoft-dev.github.io//es/qna/2020/2020-07-20-tecnologias-para-desarrollo-web/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'tecnologias-para-desarrollo-web'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://creasoft-dev.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+
+    </script>
+  </body>
+</html>

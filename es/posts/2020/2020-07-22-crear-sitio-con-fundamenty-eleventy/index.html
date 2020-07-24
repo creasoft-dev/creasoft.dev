@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="es">
+  <head profile="http://www.w3.org/2005/10/profile">
+    
+    <title>Como crear sitio à la SSG con Fundamenty y Eleventy en 15 minutos - CreaSoft.dev</title>
+    <meta name="description" content="Instrucciones para crear sitio web y publicar en Internet en menos de 10 minutos.">
+    <meta name="keywords" content="website, gitlab">
+    <link rel="icon" type="image/png" href="/creasoft.dev/images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="/creasoft.dev/assets/main.css"/>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="header" class="fixed w-full z-10 top-0 bg-gray-100 border-b border-gray-400 shadow-md">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4  ">
+        <div class="pl-4 flex items-center">
+          <image src="/creasoft.dev/images/CreaSoft.dev-logo.png" alt="Logo" class="h-5 mr-1"/>
+          <a  href="/creasoft.dev/ " class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" >
+            CreaSoft.dev
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+          <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+          
+            <div class="relative pull-right pl-4 pr-4 md:pr-0">
+              <input id="searchbox" type="search" placeholder="Buscar" class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-purple-500 rounded py-1 px-2 pl-10 appearance-none leading-normal">
+              <div class="absolute search-icon" style="top: 0.375rem;left: 1.75rem;">
+                <img src="/creasoft.dev/images/algolia-blue-mark.png" class="h-5"/>
+              </div>
+            </div>
+          
+          </div>
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/acerca" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>A Cerca</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/sersocio" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Ser Socio</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/creasoft.dev/es/pages/articulos" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>Artículos</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Preguntas y Respuestas">
+                <a href="/creasoft.dev/es/pages/pyr" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab  fill-current "></i>PyR</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://gitlab.com/creasoft.dev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-git fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://twitter.com/creasoftdev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-twitter fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Empoderemos Más">
+                <a href="https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-youtube fill-current "></i>E+</a>
+              </li>
+            
+          </ul>
+
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/es" class="inline-block text-xs text-gray-600 no-underline">Español</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/en" class="inline-block text-xs text-gray-600 no-underline">English</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/creasoft.dev/ko" class="inline-block text-xs text-gray-600 no-underline">한국어</a>
+              </li>
+            
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+      <div class="content w-full">
+        <h1>Como crear sitio à la SSG con Fundamenty y Eleventy en 15 minutos</h1>
+<p class="content-center">Publicado en: 22 de julio de 2020, por  Young-Suk Ahn Park</p>
+
+
+
+
+<div class="w-auto">
+        <div class="h-64" style="background-image:
+            url('https://fundamenty.netlify.app/images/background.jpg'); 
+        width:100%;
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover">&nbsp;</div>
+    
+</div>
+
+
+
+<p>En el artículo anterior tocamos el tema de JAMStack (Java, API, Markup), Static Site Generator (SSG) y sus ventajas.</p>
+<p>En este artículo explicaremos como crear un sitio web utilizando <a href="https://creasoft-dev.github.io/fundamenty/en/">Fundamenty</a>, el proyecto de generación de sitio estático (SSG) web basado en una herramienta llamada <a href="https://www.11ty.dev/">Eleventy</a>.</p>
+<p>Fundamenty es un proyecto creado por nosotros que provee las siguientes características:</p>
+<ol>
+<li>Soporte de multilenguas</li>
+<li>Integración con motor de busqueda Algolia (autocomplete).</li>
+<li>Google Analytics.</li>
+<li>Funcionalidad de editar en GitLab/GitHub.</li>
+<li>Generación de los archivos robots.txt y sitemap.xml para SEO.</li>
+<li>GitHub Actions script para instalar en GitHub Pages de manera automatizada.</li>
+<li>GitLab-CI script para instalar on GitLab Pages de manera automatizada.</li>
+<li>Integración con servicio de comentario Disqus</li>
+</ol>
+<h2>Pre-requisitos</h2>
+<p>Asumiendo que  si usted tiene acceso al internet, pues está leyendo esta página web, el único  requisito es tener instalado <a href="https://nodejs.org/en/">nodejs</a> en su computadora.</p>
+<p>Si desea publicar el sitio en internet, GitLab pages, también es necesario <a href="https://git-scm.com/">git</a>.</p>
+<h2>Instalación de Fundamenty</h2>
+<p>Lo primero que haremos es <a href="https://github.com/creasoft-dev/fundamenty/archive/master.zip">descargar el proyecto Fundamenty del GitHub</a>. (Si tiene git, puede descargar fácilmente clonar el proyecto y eliminar el directorio .git)</p>
+<p>Mueva el archivo descargado a la carpeta deseada, descomprima el archivo y modifique el nombre de la carpeta con el nombre que usted desee.</p>
+<p>Abra una la ventana de comando (también llamado terminal) y diríjase al directorio donde descomprimió el proyecto.</p>
+<p>Ejecute el siguiente comando para instalar las librerías. Esto tomará algo de tiempo para descargar librerias de internet. Y ocupará aproximadamente 100MB de disco:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span></code></pre>
+<p>Una vez completado la instalación proceda a ejecutar el comando para correr el servidor:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> run build_and_serve</code></pre>
+<p>Si la instalación fue exitosa, usted verá un mensaje similar a lo siguiente:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token punctuation">..</span>.<br><span class="token punctuation">[</span>Browsersync<span class="token punctuation">]</span> Access URLs:<br> --------------------------------------<br>       Local: http://localhost:8080<br>    External: http://192.168.0.102:8080<br> --------------------------------------<br>          UI: http://localhost:3001<br> UI External: http://localhost:3001<br> --------------------------------------<br><span class="token punctuation">[</span>Browsersync<span class="token punctuation">]</span> Serving files from: _site</code></pre>
+<p>Esto significa que el servidor esta corriendo y la sitio web está listo para ser accedido localmente.</p>
+<p>Abra con su navegador la dirección: <a href="http://localhost:8080/">http://localhost:8080/</a></p>
+<p>Si puede ver una página como siguiente, estamos en buen camino.</p>
+<p><img src="/images/posts/2020/fundamenty_es_s.jpg" alt="snapshot"></p>
+<h2>Personalizando el sitio.</h2>
+<p>Lo primero que haremos es cambiar el las configuraciones del proyecto del nodejs.</p>
+<p>Abra con un editor el archivo package.json, y modifique los siguientes valores:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"NOMBRE_DEL_PROJECTO"</span><span class="token punctuation">,</span><br>    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"DESCRIPCION_DEL_SITIO"</span><span class="token punctuation">,</span><br>    <span class="token property">"homepage"</span><span class="token operator">:</span> <span class="token string">"URL_DEL_SITIO"</span><span class="token punctuation">,</span><br>    <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"0.0.2"</span><span class="token punctuation">,</span><br>    <span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">"SU_NOMBRE"</span><span class="token punctuation">,</span><br>    <span class="token property">"repository"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span><br>… <br>El resto lo deja intacto<br><span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>Nota: <code>NOMBRE_DEL_PROJECTO</code> no debe de tener espacios ni caracteres especiales.</p>
+</blockquote>
+<p>Ejecute <code>npm run build_and_serve</code> nuevamente para asegurar que <code>package.json</code> no tenga errores, y verifique que <a href="http://localhost:8080">http://localhost:8080</a> despliegue correctamente. Presione Ctrl+c para parar el servicio.</p>
+<p>Ahora modificaremos la configuración del sitio, abra con su editor el archivo <code>.fundamenty.yml</code> y cambie los valores debidamente</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token comment"># Once you complete modifying this file, run</span><br><span class="token comment"># $ yarn fundamenty:tool init</span><br><span class="token key atrule">name</span><span class="token punctuation">:</span> Mi Super Sitio<br><span class="token key atrule">repoUrl</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/micuenta/mi<span class="token punctuation">-</span>super<span class="token punctuation">-</span>sitio<br><span class="token key atrule">rootUrl</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//mi<span class="token punctuation">-</span>super<span class="token punctuation">-</span>sitio.netlify.app<br><span class="token key atrule">defaultLang</span><span class="token punctuation">:</span> es<br><span class="token key atrule">langs</span><span class="token punctuation">:</span><br>  <span class="token punctuation">-</span> <span class="token key atrule">id</span><span class="token punctuation">:</span> es<br>    <span class="token key atrule">name</span><span class="token punctuation">:</span> Español<br>  <span class="token punctuation">-</span> <span class="token key atrule">id</span><span class="token punctuation">:</span> ko<br>    <span class="token key atrule">name</span><span class="token punctuation">:</span> Korean<br><br><span class="token key atrule">ALGOLIA_APP_ID</span><span class="token punctuation">:</span> <br><span class="token key atrule">ALGOLIA_INDEX_NAME</span><span class="token punctuation">:</span> <br><span class="token key atrule">ALGOLIA_SEARCH_API_KEY</span><span class="token punctuation">:</span> <br><span class="token key atrule">ALGOLIA_ADMIN_API_KEY</span><span class="token punctuation">:</span> <br><span class="token key atrule">GOOGLE_TAG_ID</span><span class="token punctuation">:</span> <br><span class="token key atrule">DISQUS_SITE_NAME</span><span class="token punctuation">:</span> </code></pre>
+<p>Si sabe los valores de los variables en mayúsculas, no se preocupe, déjelos en blanco.</p>
+<p>Ahora ejecute el siguiente comando:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> run fundamenty:tool init</code></pre>
+<p>El comando habrá generado dos archivos: <code>./src/_data/site.json.gen</code> y <code>./.env.gen</code>.</p>
+<p>Cambie los nombres de los archivos removiendo la extensión <code>.gen</code>, por ejemplo <code>./.env.gen</code> a <code>./.env</code>. Tendra que remover el archivo original <code>./src/_data/site.json</code></p>
+<p>Al ejecutar <code>npm run build_and_serve</code>, y abrir la página, notara los cambios realizados, como el nombre.</p>
+<p>Ahora estamos listos para agregar contenidos!</p>
+<h2>Agregando Contenidos</h2>
+<p>En el directorio <code>./src/{lenguaje}</code>, existen dos sub-directorios: <code>pages</code> y <code>posts</code>. El sub-directorio <code>pages</code> es para paginas de secciones que generalmente no cambia a menudo. Mientras que el sub-directorio <code>posts</code> es para contenidos que va creciendo, por ejemplo artículos de blogs. Cada artículo es representado en un archivo independiente.</p>
+<p>Los dos sub-directorios son convenciones cuales usted puede cambiar si desea. Lo que si importa es el archivo dentro del subdirectorio con el mismo nombre pero en extensión .json que incluye metadata. Por ejemplo el archivo <code>es/posts/posts.json</code> es</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>    <span class="token property">"layout"</span><span class="token operator">:</span> <span class="token string">"layouts/post.njk"</span><span class="token punctuation">,</span><br>    <span class="token property">"tags"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"post"</span><span class="token punctuation">]</span><br><span class="token punctuation">}</span></code></pre>
+<p>Indicando que los archivos en este directorio y subdirectorios utiliza el layout definido y es de tipo “post”.</p>
+<p>Cada pagina o articulo es un archivo tipo Markdown (<code>.md</code>). Un ejemplo de una página:</p>
+<pre class="language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span><br>title: A Cerca<br><span class="token title important">date: 2020-07-27<br><span class="token punctuation">---</span></span><br><br><span class="token title important"><span class="token punctuation">#</span> Esta es una página Markdown</span><br><br>Usted podrá encontrar más detalle sobre el sintaxis <br>de Mardown en <span class="token url">[<span class="token content">este enlace</span>](https://markdown.es/sintaxis-markdown/)</span></code></pre>
+<p>Abajo es un ejemplo de de un artículo (post)</p>
+<p><code>./es/posts/mi-primer-articulo.md</code></p>
+<pre class="language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span><br>title: Mi primer artículo<br><br>author: Young-Suk Ahn<br>date: 2020-07-27<br><br>keywords: ["general"]<br><br><span class="token title important">imageUrl: /images/posts/books-1617327_1920-poixabay.jpg<br><span class="token punctuation">---</span></span><br><br><span class="token title important"><span class="token punctuation">##</span> Mi Artículo</span><br><br>Hurra! Mi primer artículo en Fundamenty!<br></code></pre>
+<p>Nótese los datos envueltos entre ---. Esa sección en el archivo se llama front-matter e incluye datos utilizados por el procesador de contenidos.</p>
+<p>Por ejemplo, el <code>title</code> es utilizado para desplegar título de la página, el <code>date</code> es utilizado para ordenar la lista de artículos, etc.</p>
+<h2>Personalizando el diseño</h2>
+<blockquote>
+<p>Para personalizar el diseño, es necesario conocimiento básico de HTML y CSS, plantilla <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>, aunque si prefiere, puede cambiar el motor de plantilla a otro.</p>
+</blockquote>
+<p>El diseño de la página viene de las plantillas ubicadas en <code>./src/_includes/layouts</code>.</p>
+<p>La plantilla base es el <code>base.njk</code>.</p>
+<p>Eleventy básicamente funciona de la siguiente manera: Al hacer <code>build</code>,  Eleventy atraviesa cada carpeta recursivamente exceptuando las carpetas especiales como <code>_data</code> y <code>_includes</code> y por cada archivo que encuentra, procesa con el motor de plantilla basado en la extensión del archivo y va incluyendo el <code>layout</code> definido en el front-matter o en el dato de la carpeta.</p>
+<p>Por ejemplo, <code>es/posts/mi-primer-articulo.md</code> ejecuta el procesador de Markdown para generar el HTML</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Mi Articulo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hurra! Mi primer artículo en Fundamenty!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>
+<p>Pero como en <code>es/posts/posts.json</code> está indicando que use el layout <code>layouts/post.njk</code> ejecutara el motor de plantilla en ella y unirá con el HTML generado del <code>mi-primer-articulo.md</code></p>
+<p>En fin, para cambiar el diseño, lo que hay que hacer es modificar los archivos dentro del <code>./src/_includes/layouts/</code>. La plantilla base es <code>base.njk</code></p>
+<h2>Instalando en GitLab</h2>
+<p>El proyecto ya incluye el GiLab-CI script (<code>.gitlab-ci.yml</code>) para instalar en GitLab Pages. Para más detalle siga las instrucciones en el artículo anterior. /es/posts/2020/2020-07-03-publicar-gitlabpages/</p>
+<p>Si es primera vez usando <strong>git</strong> y <strong>GitLab</strong>, he aqui una guia rapida:</p>
+<p>Para crear repositorio en <strong>GitLab</strong>:</p>
+<ol>
+<li>Ingrese a GitLab.com,</li>
+<li>En la página principal, presione el boton verde <em>New Project</em></li>
+<li>Seleccione <em>Create Blank Project</em></li>
+<li>Llene el formulario del proyecto
+<ol>
+<li>Project name: &lt;El nombre del proyecto&gt;,</li>
+<li>Project URL:</li>
+<li>Project slug: &lt;al introducir el nombre, automaticamente se llenará esta parte&gt;</li>
+<li>Seleccione Public para el <strong>Visibility Level</strong></li>
+<li>NO chequee la opción <strong>Initialize repository with a README</strong></li>
+<li>Y luego presione el botón *Create Project”</li>
+</ol>
+</li>
+<li>Cuando muestre la pantalla, seguiremos la instrucción del <strong>Push an existing folder</strong> para inicializar y subir el sitio</li>
+</ol>
+<p>Si  no ha configurado git local con su identificación aun, siga las instrucciones que muestra en la página <strong>Git global setup</strong></p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">git</span> config --global user.name <span class="token string">"&lt;SU-NOMBRE>"</span><br><span class="token function">git</span> config --global user.email <span class="token string">"&lt;SU-EMAIL>"</span></code></pre>
+<p>Para inicializar y subir el sitio a GitLab</p>
+<ol>
+<li>Desde el directorio raíz del proyecto, ejecute los comandos que se muestra</li>
+</ol>
+<pre class="language-shell"><code class="language-shell"><span class="token function">git</span> init<br><span class="token function">git</span> remote <span class="token function">add</span> origin git@gitlab.com:<span class="token operator">&lt;</span>SU-PROYECTO<span class="token operator">></span><br><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><br><span class="token function">git</span> commit -m <span class="token string">"Initial commit"</span><br><span class="token function">git</span> push -u origin master</code></pre>
+<p>GitLab, al encontrar el archivo <code>.gitlab-ci.yml</code> automáticamente intentará instalar la el sitio a GitLab Pages. En este momento habrá instalado accesible a la direccion <code>https://&lt;su-cuenta&gt;.gitlab.io/&lt;nombre-proyecto&gt;</code>, pero cuando se navega a la direccion el sitio mostrara error 404 (Pagina No Encontrada). Esto se debe a que Fundamenty está redireccionando a la la ruta raíz en vez de <code>&lt;nombre-proyecto&gt;</code></p>
+<p>Para arreglar esto:</p>
+<ol>
+<li>En GitLab, diríjase a la página principal de su  proyecto.</li>
+<li>En el menú izquierda, seleccione <strong>Settings</strong> que esta en el fondo.</li>
+<li>Seleccione sl sub-menu <strong>CI / CD</strong></li>
+<li>En la session titulado <strong>Variables</strong>, presione <strong>Expand</strong>
+<ol>
+<li>Presione <strong>Add Variables</strong></li>
+<li>En el Key introduzca el valor <code>WEB_PATH_PREFIX</code></li>
+<li>En el Value introduzca como valor el nombre de su proyecto (tal como lo muestra la última parte del URL del projecto en GitLab, por ejemplo en mi caso el URL del proyeccto es <a href="https://gitlab.com/ysahnpark/mi-prueba">https://gitlab.com/ysahnpark/mi-prueba</a>, el nombre el projecto es <code>mi-prueba</code></li>
+</ol>
+</li>
+</ol>
+<p>Por cada cambio que realice y que haya verificado que el cambio fue correcto, comita los cambios al git:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token variable">$git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><br><span class="token variable">$git</span> commit -am “Agregado una pagina nueva”</code></pre>
+<p>Y cuando esté listo para subir, ejecute el siguiente comando:</p>
+<p>$git push origin</p>
+<p>Posiblemente necesite crear llaves ssh para el acceso a GitLab.</p>
+<p>Siga las instrucciones aqui: <a href="https://docs.gitlab.com/ee/ssh/#ed25519-ssh-keys">https://docs.gitlab.com/ee/ssh/#ed25519-ssh-keys</a> y aqui <a href="https://docs.gitlab.com/ee/ssh/#ed25519-ssh-keys">https://docs.gitlab.com/ee/ssh/#ed25519-ssh-keys</a></p>
+<h3>De aquí en adelante, le dejo a su imaginación para que produzca sitios maravillosos!</h3>
+<h2>Problemas Comunes</h2>
+<ul>
+<li>Después de cambiar <code>.fundamenty.yml</code>, la pagina se redirecciona y muestra una pagina en blanco.
+<ul>
+<li>Posiblemente el lenguaje de defecto (<code>defaultLang</code>) no sea un lenguaje que es parte del lenguaje activo.</li>
+</ul>
+</li>
+<li>Despues de subir a GitLab, la pagina no me muestra
+<ul>
+<li>Toma aproximadamente 30 mins para que GitLab configure el DNS interno para mappear la pagina.</li>
+</ul>
+</li>
+<li>Aun despues de 30 mins, GitLab me muestra error 404 (Pagina No Encontrada).
+<ul>
+<li>Verifique que el valor del <code>WEB_PATH_PREFIX</code> en el Setting de CI/CD este correcto.</li>
+</ul>
+</li>
+</ul>
+
+
+
+<hr />
+<p class="content-center">Publicado en: 22 de julio de 2020, por  Young-Suk Ahn Park</p>
+
+<a href="https://gitlab.com/creasoft-dev/creasoft.dev/edit/master/./src/es/posts/2020/2020-07-22-crear-sitio-con-fundamenty-eleventy.md">Editar en Git</a>
+
+
+      </div>
+      
+      <div class="content w-full">
+        <div id="disqus_thread"></div>
+      </div>
+      
+    </div>
+
+    <footer class="w-full bg-gray-100 mt-6 p-2 border-t-1 border-gray-300">
+      <div <div class="w-full container mx-auto flex flex-wrap items-center justify-center ">
+        <div >
+          Based on <a href="https://github.com/creasoft-dev/fundamenty">Fundamenty</a> by <a href="https://creasoft.dev/">CreaSoft.dev</a>, 
+          powered by <a href="https://www.11ty.dev/" >Eleventy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/creasoft.dev/assets/main.js"></script>
+
+    <script>
+
+      /* https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8 */
+      /* Toggle dropdown list */
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      var helpMenuDiv = document.getElementById("menu-content");
+      var helpMenu = document.getElementById("menu-toggle");
+
+      document.onclick = check;
+
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              navMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+        //Help Menu
+        if (!checkParent(target, helpMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, helpMenu)) {
+            // click on the link
+            if (helpMenuDiv.classList.contains("hidden")) {
+              helpMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              helpMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            helpMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+      }
+
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+
+/**
+ * Disqus
+ */
+var disqus_config = function () {
+this.language = "es";
+this.page.title = 'Como crear sitio à la SSG con Fundamenty y Eleventy en 15 minutos';
+this.page.url = 'https://creasoft-dev.github.io//es/posts/2020/2020-07-22-crear-sitio-con-fundamenty-eleventy/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'crear-sitio-con-fundamenty-eleventy'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://creasoft-dev.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+
+    </script>
+  </body>
+</html>

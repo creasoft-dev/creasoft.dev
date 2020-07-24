@@ -1,0 +1,93 @@
+[
+  
+    {
+      "title": "About",
+      "lang": "en",
+      "tags": "page",
+      "url": "/en/pages/about/",
+      "objectID": "/en/pages/about/",
+      "content": "&quot;Who we are?\nWe are a group of software engineers passionate about learning and sharing about the art and science of software creation.\n&quot;"
+    },
+  
+    {
+      "title": "Articles",
+      "lang": "en",
+      "tags": "page",
+      "url": "/en/pages/articles/",
+      "objectID": "/en/pages/articles/",
+      "content": "&quot;&quot;"
+    },
+  
+    {
+      "title": "Partnership",
+      "lang": "en",
+      "tags": "page",
+      "url": "/en/pages/partnership/",
+      "objectID": "/en/pages/partnership/",
+      "content": "&quot;Why be a Partner?\nHow to become a partner?\n&quot;"
+    },
+  
+    {
+      "title": "A Cerca",
+      "lang": "es",
+      "tags": "page",
+      "url": "/es/pages/acerca/",
+      "objectID": "/es/pages/acerca/",
+      "content": "&quot;Quienes somos?\nSomos un grupo de ingenieros de software con interes en divulgar el conocimientos el lengua española.\nEl Equipo\nMtr. Young-Suk Ahn Park\nhttps://youngsukahn.com/\n&quot;"
+    },
+  
+    {
+      "title": "Artículos",
+      "lang": "es",
+      "tags": "page",
+      "url": "/es/pages/articulos/",
+      "objectID": "/es/pages/articulos/",
+      "content": "&quot;&quot;"
+    },
+  
+    {
+      "title": "Preguntas y Respuestas",
+      "lang": "es",
+      "tags": "page",
+      "url": "/es/pages/pyr/",
+      "objectID": "/es/pages/pyr/",
+      "content": "&quot;&quot;"
+    },
+  
+    {
+      "title": "Ser Socio",
+      "lang": "es",
+      "tags": "page",
+      "url": "/es/pages/sersocio/",
+      "objectID": "/es/pages/sersocio/",
+      "content": "&quot;¿Para que ser socio?\nSi usted comparte la misma pasión de crear software de calidad que resuelve problemas, y asimismo\nmejorar la indústria de software, únese a la iniciativa!\nCada vez que creamos contenido de calidad, estamos aumentado nuestras habilidades al mismo tiempo\nque estamos facultando a otros y abriendo más oportunidades.\n¿Como ser socio?\nEnvienos un email al creasoftdev@gmail.com con sus habilidades y temas de interés que quiera compartir.\nLe asesoramos en la creacion de contenido y video.\n&quot;"
+    },
+  
+    {
+      "title": "소개",
+      "lang": "ko",
+      "tags": "page",
+      "url": "/ko/pages/about/",
+      "objectID": "/ko/pages/about/",
+      "content": "&quot;저희는\n새로운 기술을 꾸준히 배우고 배운 것을 공유하여 소프트웨어 산업을 촉진시고자 합니다.\n&quot;"
+    },
+  
+    {
+      "title": "기사",
+      "lang": "ko",
+      "tags": "page",
+      "url": "/ko/pages/articles/",
+      "objectID": "/ko/pages/articles/",
+      "content": "&quot;&quot;"
+    },
+  
+    {
+      "title": "파트너",
+      "lang": "ko",
+      "tags": "page",
+      "url": "/ko/pages/partnership/",
+      "objectID": "/ko/pages/partnership/",
+      "content": "&quot;파트너 이점\n파트너 되기\n&quot;"
+    }
+  
+]
