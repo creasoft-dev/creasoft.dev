@@ -23,5 +23,8 @@ keywords: Development, programming, Java, JavaScript, TypeScript, Python, HTML, 
     
 # Are you in the business of creating software?
 
-We will be your partner!
-We provide practical content to increase you and your team's performance.
+Come join us. Be part of the community that shares knowledge.
+
+We will translate the content in Spanish, and as community grow, we will expand to other languages.
+
+We care about diversity and inclusion in the technology industry. Your contribution with content will help us bridge the knowledge gap, and move towards gender and social equality.

@@ -33,7 +33,7 @@ Fundamenty es un proyecto creado por nosotros que provee las siguientes caracter
 
 Asumiendo que  si usted tiene acceso al internet, pues está leyendo esta página web, el único  requisito es tener instalado [nodejs](https://nodejs.org/en/) en su computadora. 
 
-Si desea publicar el sitio en internet, GitLab pages, también es necesario [git](https://git-scm.com/).
+Si desea publicar el sitio en internet, GitLab Pages, también es necesario [git](https://git-scm.com/).
 
 
 ## Instalación de Fundamenty
@@ -242,11 +242,11 @@ En fin, para cambiar el diseño, lo que hay que hacer es modificar los archivos 
 
 El proyecto ya incluye el GiLab-CI script (`.gitlab-ci.yml`) para instalar en GitLab Pages. Para más detalle siga las instrucciones en el artículo anterior. /es/posts/2020/2020-07-03-publicar-gitlabpages/
 
-Si es primera vez usando **git** y **GitLab**, he aqui una guia rapida:
+Si es la primera vez usando **git** y **[GitLab](https://gitlab.com/)**, he aquí una guía rápida:
 
 Para crear repositorio en **GitLab**:
 
-1. Ingrese a GitLab.com,
+1. Ingrese a [GitLab.com](https://gitlab.com/),
 2. En la página principal, presione el boton verde *New Project*
 3. Seleccione *Create Blank Project*
 4. Llene el formulario del proyecto
@@ -255,7 +255,7 @@ Para crear repositorio en **GitLab**:
     3. Project slug: &lt;al introducir el nombre, automaticamente se llenará esta parte>
     4. Seleccione Public para el **Visibility Level** 
     5. NO chequee la opción **Initialize repository with a README**
-    6. Y luego presione el botón *Create Project”
+    6. Y luego presione el botón **Create Project**
 5. Cuando muestre la pantalla, seguiremos la instrucción del **Push an existing folder** para inicializar y subir el sitio
 
 Si  no ha configurado git local con su identificación aun, siga las instrucciones que muestra en la página **Git global setup**

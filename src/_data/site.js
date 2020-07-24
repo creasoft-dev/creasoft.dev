@@ -13,7 +13,7 @@ const menu_ko = require("./l10n/menu_ko.json");
  */
 const site = {
     buildTime: new Date(),
-    repoUrl: "https://gitlab.com/creasoft-dev/website",
+    repoUrl: "https://github.com/creasoft-dev/creasoft.dev",
     rootUrl: "https://creasoft.dev",
 
     // Branding
