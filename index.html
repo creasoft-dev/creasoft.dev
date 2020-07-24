@@ -23,7 +23,7 @@ var locale =
     .map(language => language.substr(0, 2))
     .find(language => availableLanguages.includes(language)) || "es";
 
-let redirUrl = "/creasoft.dev/" + locale + "/";
+let redirUrl = "/" + locale + "/";
 console.log("Redirecting to :" + redirUrl);
 window.location.replace(redirUrl);
 </script>
