@@ -19,7 +19,7 @@ jobs:
         run: yarn build
         env:
           REPO_URL: https://gitlab.com/creasoft-dev/creasoft.dev
-          WEB_PATH_PREFIX: /creasoft.dev/
+          # WEB_PATH_PREFIX: /creasoft.dev/
           WEB_ROOT_URL: https://creasoft-dev.github.io/
           GOOGLE_TAG_ID: UA-171823319-1
           ALGOLIA_APP_ID: 5UDNUYCRCB
