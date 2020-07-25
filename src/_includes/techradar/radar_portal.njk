@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="container w-full flex flex-wrap mx-auto">
+    <div class="topography-background content w-full flex rounded-lg">
+        <div id="title" class="flex-1 text-center align-middle " >
+        <span class="text-4xl font-mono font-extrabold uppercase">Radar de Tecnologia</span>
+        </div>
+        <div id="radar-categories" class="flex-1 text-center" >
+            {% for id, category in categories  %}
+            <div class="font-bold rounded-lg p-1 m-1 bg-{{category.color}}-400">
+            {{ category.label }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="content w-full">
+    {{ content | safe }}
+    </div>
+
+    <div id="radar-items" class="w-full" >
+        {% for radarItem in radar_items  %}
+        <div class="">
+        <a class="hover:bg-blue-500 hover:text-white" href="{{ radarItem.url | url }}">{{ radarItem.data.title }}</a>
+        <span class="inline-block bg-{{categories[radarItem.data.category].color}}-200 text-xs px-2 rounded-lg">
+            {{ radarItem.data.category }}
+        </span>
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>

@@ -27,4 +27,4 @@ Come join us. Be part of the community that shares knowledge.
 
 We will translate the content in Spanish, and as community grow, we will expand to other languages.
 
-We care about diversity and inclusion in the technology industry. Your contribution with content will help us bridge the knowledge gap, and move towards gender and social equality.
+We care about diversity and inclusion in the technology industry. Your contribution with content will help us bridge the knowledge gap, and move towards social equality.
