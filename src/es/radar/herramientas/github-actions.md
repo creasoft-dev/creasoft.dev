@@ -1,12 +1,12 @@
 ---
 title: GitHub Actions
 
-date: 2020-07-20
+date: 2020-07-25
 dateRemoved: 
 ring: adoptar
 
 description: 
-keywords: ["lenguaje"]
+keywords: ["plataforma"]
 homepage: https://github.com/features/actions
 
 author: Young-Suk Ahn Park

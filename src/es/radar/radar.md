@@ -9,4 +9,4 @@ pagination:
   alias: radar_items
 ---
 
-El radar de tecnologia es una coleccion 
+El radar de tecnología es una guía de tecnología basada on opiniones.
