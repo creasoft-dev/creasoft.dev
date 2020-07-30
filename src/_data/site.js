@@ -77,4 +77,6 @@ if (process.env.DISQUS_SITE_NAME) {
     site.DISQUS_SITE_NAME = process.env.DISQUS_SITE_NAME;
 }
 
+console.log(site);
+
 module.exports = site;
