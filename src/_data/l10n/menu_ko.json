@@ -12,32 +12,32 @@
             "href": "/ko/pages/articles"
         },
         {
-            "icon": "fa-git",
+            "icon": "fab fa-git",
             "href": "https://github.com/creasoft-dev"
         },
         {
-            "icon": "fa-twitter",
+            "icon": "fab fa-twitter",
             "href": "https://twitter.com/creasoftdev"
         },
         {
-            "icon": "fa-youtube",
+            "icon": "fab fa-youtube",
             "tooltip": "Empoderemos Más",
             "title": "E+",
             "href": "https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw"
         }
     ],
     "side": [{
-            "icon": "fa-git",
+            "icon": "fab fa-git",
             "title": "Personal",
             "href": "https://github.com/ysahnpark"
         },
         {
-            "icon": "fa-twitter",
+            "icon": "fab fa-twitter",
             "title": "Personal",
             "href": "https://github.com/ysahnpark"
         },
         {
-            "icon": "fa-youtube",
+            "icon": "fab fa-youtube",
             "title": "EmpoderemosMas",
             "href": "https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw"
         }

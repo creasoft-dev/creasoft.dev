@@ -6,10 +6,12 @@ date: 2020-07-03
 tags: ["post", "despliegue"]
 
 description: Publica un sitio web en GitLab Pages
-keywords: website, gitlab
+keywords: ["website", "gitlab"]
+
+imageUrl: /images/posts/gitlab-logo-white-rgb.png
+
 ---
 
-<img href="/images/posts/gitlab-logo-white-rgb.png" />
 
 > NOTA antes de empezar: Los servicios utilizados en este ejercicio - excepto el nombre de dominio - 
 no conlleva costo, así que tome ventaja de los servicios!

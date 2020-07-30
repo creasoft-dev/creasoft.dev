@@ -1,6 +1,6 @@
 ---
 title: Tecnicas - Radar de Tecnologia
-layout: techradar/radar_category.njk
+layout: radar/radar_category.njk
 
 this_category: tecnicas
 

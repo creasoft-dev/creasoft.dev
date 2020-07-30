@@ -3,18 +3,8 @@ layout: layouts/base.njk
 ---
 
 <div class="container w-full flex flex-wrap mx-auto">
-    <div class="topography-background content w-full flex rounded-lg">
-        <div id="title" class="flex-1 text-center align-middle " >
-        <span class="text-4xl font-mono font-extrabold uppercase">Radar de Tecnologia</span>
-        </div>
-        <div id="radar-categories" class="flex-1 text-center" >
-            {% for id, category in categories  %}
-            <div class="font-bold rounded-lg p-1 m-1 bg-{{category.color}}-400">
-            <a href='/{{ locale + "/radar/" + category.id | url}}'>{{ category.label }}</a>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+    {% include "radar/partial-radar_header.njk" %}
+
     <div class="content w-full">
     {{ content | safe }}
     </div>

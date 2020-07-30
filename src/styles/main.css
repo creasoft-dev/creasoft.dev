@@ -17,6 +17,10 @@ h3 {
 }
 
 h3 {
+    @apply leading-relaxed text-xl text-teal-600;
+}
+
+h4 {
     @apply leading-relaxed text-lg text-teal-600;
 }
 
@@ -25,7 +29,7 @@ p {
 }
 
 ul {
-    @apply text-base pl-8 list-disc;
+    @apply text-base pl-8 list-disc my-3;
 }
 
 ol {

@@ -6,7 +6,7 @@ date: 2020-07-22
 tags: ["post", "despliegue"]
 
 description: Instrucciones para crear sitio web y publicar en Internet en menos de 10 minutos.
-keywords: website, gitlab
+keywords: ["website", "gitlab"]
 
 imageUrl: https://fundamenty.netlify.app/images/background.jpg
 ---

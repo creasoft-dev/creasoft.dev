@@ -54,7 +54,7 @@
             {% for menuItem in site[locale].menu.top %}
               <li class="mr-3 py-2 lg:py-0" title="{{menuItem.tooltip}}">
                 <a href="{{menuItem.href | url}}" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
-                  <i class="fab {{menuItem.icon}} fill-current "></i>{{menuItem.title}}</a>
+                  <i class="{{menuItem.icon}} fill-current "></i>{{menuItem.title}}</a>
               </li>
             {% endfor %}
           </ul>

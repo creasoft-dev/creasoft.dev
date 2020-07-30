@@ -1,5 +1,5 @@
 {
-    "layout": "techradar/radar_item.njk",
+    "layout": "radar/radar_item.njk",
 
     "categories": {
         "tecnicas": {
