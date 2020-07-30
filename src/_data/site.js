@@ -19,7 +19,7 @@ const site = {
     // Branding
     name: "CreaSoft.dev",
     logoUrl: "/images/CreaSoft.dev-logo.png",
-    faviconUrl: "/images/logo.ico",
+    faviconUrl: "/images/creasoft.dev-logo.ico",
     googleTagId: "", // use environment variable, see bottom of this file
 
     // Active languages
