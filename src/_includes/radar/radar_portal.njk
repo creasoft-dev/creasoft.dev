@@ -1,23 +1,18 @@
 ---
-layout: layouts/base.njk
+layout: radar/radar_base.njk
 ---
 
-<div class="container w-full flex flex-wrap mx-auto">
-    {% include "radar/partial-radar_header.njk" %}
+<div class="content w-full">
+{{ content | safe }}
+</div>
 
-    <div class="content w-full">
-    {{ content | safe }}
+<div id="radar-items" class="w-full" >
+    {% for radarItem in radar_items  %}
+    <div class="">
+    <a class="hover:bg-{{categories[radarItem.data.category].color}}-700 hover:text-white  no-underline" href="{{ radarItem.url | url }}">{{ radarItem.data.title }}</a>
+    <span class="inline-block bg-{{categories[radarItem.data.category].color}}-200 text-xs px-2 rounded-lg">
+        {{ radarItem.data.category }}
+    </span>
     </div>
-
-    <div id="radar-items" class="w-full" >
-        {% for radarItem in radar_items  %}
-        <div class="">
-        <a class="hover:bg-blue-500 hover:text-white" href="{{ radarItem.url | url }}">{{ radarItem.data.title }}</a>
-        <span class="inline-block bg-{{categories[radarItem.data.category].color}}-200 text-xs px-2 rounded-lg">
-            {{ radarItem.data.category }}
-        </span>
-        </div>
-        {% endfor %}
-    </div>
-    
+    {% endfor %}
 </div>

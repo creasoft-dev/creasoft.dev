@@ -1,9 +1,10 @@
 {
-    "search": "Buscar",
     "articles": "Artículos",
-    "qnas": "Preguntas y Respuestas",
-    "published_on": "Publicado en",
     "by": "por",
+    "published_on": "Publicado en",
+    "qnas": "Preguntas y Respuestas",
+    "search": "Buscar",
     "edit_on_git": "Editar en Git",
-    "NOT_FOUND": "Chanfles! La página que esta buscando esta en el limbo"
+    "NOT_FOUND": "Chanfles! La página que esta buscando esta en el limbo",
+    "tech_radar": "Radar de Tecnología"
 }

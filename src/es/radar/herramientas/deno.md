@@ -1,10 +1,10 @@
 ---
-title: TypeScript
+title: Deno
 
 category: "herramientas"
 date: 2020-07-25
 dateRemoved: 
-ring: "adoptar"
+ring: "evaluar"
 
 description: 
 keywords: ["lenguaje", "plataforma"]
