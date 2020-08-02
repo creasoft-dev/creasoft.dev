@@ -591,6 +591,10 @@ video {
   height: auto;
 }
 
+body {
+  font-size: 1.2rem
+}
+
 /**
  * Referenced from: https://github.com/iandinwoodie/github-markdown-tailwindcss/blob/master/markdown.css
  */
@@ -606,7 +610,7 @@ h1 {
 
 h2 {
   line-height: 1.625;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   --text-opacity: 1;
   color: #319795;
   color: rgba(49, 151, 149, var(--text-opacity));
@@ -622,7 +626,7 @@ h3 {
 
 h3 {
   line-height: 1.625;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   --text-opacity: 1;
   color: #319795;
   color: rgba(49, 151, 149, var(--text-opacity));
@@ -630,7 +634,7 @@ h3 {
 
 h4 {
   line-height: 1.625;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   --text-opacity: 1;
   color: #319795;
   color: rgba(49, 151, 149, var(--text-opacity));
@@ -643,7 +647,7 @@ p {
 }
 
 ul {
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding-left: 2rem;
   list-style-type: disc;
   margin-top: 0.75rem;
@@ -651,13 +655,13 @@ ul {
 }
 
 ol {
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding-left: 2rem;
   list-style-type: decimal;
 }
 
 table {
-  font-size: 1rem;
+  font-size: 1.2rem;
   --border-opacity: 1;
   border-color: #718096;
   border-color: rgba(113, 128, 150, var(--border-opacity));
@@ -1002,23 +1006,23 @@ code {
 }
 
 .text-xs {
-  font-size: 0.75rem;
+  font-size: .75rem;
 }
 
 .text-sm {
-  font-size: 0.875rem;
-}
-
-.text-base {
   font-size: 1rem;
 }
 
+.text-base {
+  font-size: 1.2rem;
+}
+
 .text-lg {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 .text-xl {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 
 .text-2xl {
@@ -1026,7 +1030,7 @@ code {
 }
 
 .text-3xl {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 
 .text-4xl {
