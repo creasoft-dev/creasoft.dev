@@ -22,6 +22,3 @@ transpilar genera codigo JavaScript (ECMAScript)
 Consideraciones:
 - Projectos grandes
 - Desarrollo de Librerias (reuso)
-
-
-Deno.. 

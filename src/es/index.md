@@ -21,7 +21,7 @@ keywords: desarrollo, programacion, web, Java, JavaScript, TypeScript, contenedo
     background-size: 50%; 
     background-position:center;">&nbsp;</div>
 
-# ¿Esta en el negocio de crear soluciones con software?
+# ¿Está en el negocio de crear soluciones con software?
 
 Nosotros seremos su compañer@!!!
 Brindamos contenidos para mejorar su rendimiento ya sea como persona o equipo desarrollador.

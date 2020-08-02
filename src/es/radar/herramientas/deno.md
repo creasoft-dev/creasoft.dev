@@ -20,4 +20,4 @@ EL creador de Nodejs, depues de las lecciones aprendidas, creó el Deno. Verán,
 
 El soporte nativo de Tyepscript, entorno de seguridad, uso de Rust para plugins son características atractivas.
 
-Lo que hace falta es maduracion desde el punto de vista de cumunidad y ecosistema.
+Lo que hace falta es maduración de la plataforma, una comunidad mas grande y un ecosistema más rico.

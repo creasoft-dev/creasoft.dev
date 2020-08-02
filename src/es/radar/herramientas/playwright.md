@@ -8,7 +8,7 @@ ring: "adoptar"
 
 description: 
 keywords: ["prueba", "automatizacion"]
-homepage: https://deno.land
+homepage: https://playwright.dev/
 repo: https://github.com/microsoft/playwright
 
 author: Young-Suk Ahn Park
@@ -27,4 +27,3 @@ Herramientas alternativas está, ademas de Puppeteer, TestCafé, Selenium, [Taik
 
 La ventaja de Playwright, además que esta soportado por equipo de Microsoft, provee todas las 
 funcionalidades de Puppeteer y soporta multiples navegadores.
-

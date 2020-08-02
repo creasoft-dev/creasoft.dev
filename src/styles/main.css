@@ -1,4 +1,8 @@
 @tailwind base;
+body {
+    @apply text-base
+}
+
 
 /**
  * Referenced from: https://github.com/iandinwoodie/github-markdown-tailwindcss/blob/master/markdown.css

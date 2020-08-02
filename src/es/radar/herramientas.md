@@ -6,7 +6,7 @@ this_category: herramientas
 
 pagination:
   data: collections.radar
-  size: 10
+  size: 50
   reverse: true
   alias: radar_items
 ---
