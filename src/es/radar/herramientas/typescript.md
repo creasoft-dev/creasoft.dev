@@ -3,10 +3,10 @@ title: TypeScript
 
 category: "herramientas"
 date: 2020-07-25
-dateRemoved: 
+dateRemoved:
 ring: "adoptar"
 
-description: 
+description:
 keywords: ["lenguaje"]
 homepage: https://www.typescriptlang.org/
 repo: https://github.com/microsoft/TypeScript
@@ -14,9 +14,9 @@ repo: https://github.com/microsoft/TypeScript
 author: Young-Suk Ahn Park
 ---
 
-### 2020-07-25 Adoptar
+## 2020-07-25 Adoptar
 
-TypeScript es un lenguaje de programacion de fuente abierta desarrollada por Microsoft que al 
+TypeScript es un lenguaje de programacion de fuente abierta desarrollada por Microsoft que al
 transpilar genera codigo JavaScript (ECMAScript)
 
 Consideraciones:

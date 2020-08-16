@@ -2,17 +2,17 @@
 title: JAMStack
 
 date: 2020-07-25
-dateRemoved: 
+dateRemoved:
 ring: "adoptar"
 
-description: 
+description:
 keywords: ["nube"]
-homepage: 
+homepage:
 
 author: Young-Suk Ahn Park
 ---
 
-### 2020-07-25 Adoptar
+## 2020-07-25 Adoptar
 
 La combinación de JavaScript, API, Markdown produce un acrónimo pictorico: JAM. De aqui viene el JAMStack.
 

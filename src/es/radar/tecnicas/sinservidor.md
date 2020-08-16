@@ -2,17 +2,17 @@
 title: Sin-servidor (Serverless)
 
 date: 2020-07-25
-dateRemoved: 
+dateRemoved:
 ring: "probar"
 
-description: 
+description:
 keywords: ["arquitectura", "diseño"]
-homepage: 
+homepage:
 
 author: Young-Suk Ahn Park
 ---
 
-### 2020-07-30 Probar
+## 2020-07-30 Probar
 
 Sin-servidor (Serverless) es el modelo en donde el proveeder mantiene y maneja la parte del servidor, el desarrollador (o el equipo desarrollador) solamenete hay que deplorar la logica.
 

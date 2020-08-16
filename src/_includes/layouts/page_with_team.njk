@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+
+{{ content | safe }}
+
+<div class="flex justify-between w-full">
+
+{% for contributor in team[locale] %}
+<div class="lg:flex bg-gray-200 rounded-lg p-6  m-2">
+    <img class="h-16 w-16 lg:h-24 lg:w-24 rounded-full mx-auto lg:mx-1 lg:mr-6" src="{{ contributor.image | url}}">
+    <div class="text-center lg:text-left">
+        <h2 class="text-lg">{{ contributor.name }}</h2>
+        <div class="text-gray-600">{{ contributor.synopsis }}</div>
+        <div class="text-gray-600"><a href="{{ contributor.website }}">{{ contributor.website }}</a></div>
+        <div class="text-gray-600"><a href="{{ contributor.twitter }}"><i class="fab fa-twitter fill-current "></i></a></div>
+    </div>
+</div>
+{% endfor %}
+
+</div>

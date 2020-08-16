@@ -3,10 +3,10 @@ title: Deno
 
 category: "herramientas"
 date: 2020-07-25
-dateRemoved: 
+dateRemoved:
 ring: "evaluar"
 
-description: 
+description:
 keywords: ["lenguaje", "plataforma"]
 homepage: https://deno.land
 repo: https://github.com/denoland/deno
@@ -14,7 +14,7 @@ repo: https://github.com/denoland/deno
 author: Young-Suk Ahn Park
 ---
 
-### 2020-07-25 Evaluar
+## 2020-07-25 Evaluar
 
 EL creador de Nodejs, depues de las lecciones aprendidas, creó el Deno. Verán, Deno son las sílabas transpuestad de node.
 

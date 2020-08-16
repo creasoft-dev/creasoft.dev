@@ -3,17 +3,15 @@ title: WebAssembly
 
 category: "herramientas"
 date: 2020-07-25
-dateRemoved: 
+dateRemoved:
 ring: "evaluar"
 
-description: 
+description:
 keywords: ["lenguaje", "plataforma"]
 homepage: https://webassembly.org/
-repo: 
+repo:
 
 author: Young-Suk Ahn Park
 ---
 
-### 2020-07-25 Evaluar
-
-
+## 2020-07-25 Evaluar
