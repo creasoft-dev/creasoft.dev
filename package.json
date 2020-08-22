@@ -15,6 +15,7 @@
     "devDependencies": {
         "@11ty/eleventy": "^0.11.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+        "alex": "^8.2.0",
         "algoliasearch": "^4.3.0",
         "autocomplete.js": "^0.37.1",
         "autoprefixer": "^9.8.4",
@@ -38,6 +39,7 @@
         "build:eleventy": "eleventy",
         "build": "run-s clean build:*",
         "build_and_serve": "yarn build && yarn serve:eleventy",
-        "algolia:tool": "node ./tools/algolia-tool.js"
+        "algolia:tool": "node ./tools/algolia-tool.js",
+        "alex": "alex ./src/en"
     }
 }

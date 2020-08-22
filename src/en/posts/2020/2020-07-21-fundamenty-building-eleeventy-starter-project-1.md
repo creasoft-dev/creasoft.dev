@@ -177,8 +177,8 @@ All the source code is under `./src` directory. The multi-language relevant file
 
 
 ```text
-├───{lang}       - Contents in given locale 
-│   ├ {lang}.json    - Common front matter for all the contents in Spanish 
+├───{lang}       - Contents in given locale
+│   ├ {lang}.json    - Common front matter for all the contents in Spanish
 │   ├───pages    - Site pages
 │   └───posts    - Site posts (e.g. blog articles)
 ├───_data        - Data/configuration file.
