@@ -21,7 +21,7 @@ layout: layouts/base.njk
     <h3>
       <a href="{{ post.url | url }}">{{ post.data.title }}</a>
     </h3>
-    {{ post.date | formatDate("LL", locale) }}
+    {{ post.date | formatDate("DD", locale) }}
   </article>
 {% endfor %}
 
@@ -35,7 +35,7 @@ layout: layouts/base.njk
     <h3>
       <a href="{{ qna.url | url }}">{{ qna.data.title }}</a>
     </h3>
-    {{ qna.date | formatDate("LL", locale) }}
+    {{ qna.date | formatDate("DD", locale) }}
   </article>
 {% endfor %}
 
