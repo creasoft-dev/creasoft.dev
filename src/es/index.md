@@ -13,13 +13,9 @@ pagination:
 description: CreaSoft.dev - Sitio para divulgar conocimientos de programacion.
 keywords: desarrollo, programacion, web, Java, JavaScript, TypeScript, contenedores, docker, kubernetes
 ---
-<div
-    style="background-image:
-           url('/images/humaaans.png');
-    height:250px;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position:center;">&nbsp;</div>
+<div class="flex justify-center  ">
+<img class="h-1/6 w-2/5 object-cover" src="/images/humaaans.png" >
+</div>
 
 # ¿Está en el negocio de crear soluciones con software?
 

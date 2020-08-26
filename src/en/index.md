@@ -13,13 +13,9 @@ pagination:
 description: Developer's knowledge sharing site.
 keywords: Development, programming, Java, JavaScript, TypeScript, Python, HTML, CSS
 ---
-<div
-    style="background-image:
-           url('/images/humaaans.png');
-    height:250px;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position:bottom;">&nbsp;</div>
+<div class="flex justify-center  ">
+<img class="h-1/6 w-2/5 object-cover" src="/images/humaaans.png" >
+</div>
 
 # Are you in the business of creating software?
 
