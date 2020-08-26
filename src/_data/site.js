@@ -1,17 +1,5 @@
-const messages_en = require("./l10n/messages_en.json");
-const messages_es = require("./l10n/messages_es.json");
-const messages_ko = require("./l10n/messages_ko.json");
 
-const menu_en = require("./l10n/menu_en.json");
-const menu_es = require("./l10n/menu_es.json");
-const menu_ko = require("./l10n/menu_ko.json");
-
-/**
- * Get localization:
- * site[locale]._t.search
- * site[locale]._t.menu.top
- */
-const site = {
+let site = {
     buildTime: new Date(),
     repoUrl: "https://github.com/creasoft-dev/creasoft.dev",
     rootUrl: "https://creasoft.dev",
@@ -37,21 +25,20 @@ const site = {
         }
     ],
 
-    // locale message bundle:
-    // _t is for translation
-    en: {
-        menu: menu_en,
-        _t: messages_en
-    },
-    es: {
-        menu: menu_es,
-        _t: messages_es
-    },
-    ko: {
-        menu: menu_ko,
-        _t: messages_ko
-    }
 };
+
+/**
+ * Get localization:
+ * site[locale].menu
+ * site[locale]._t.search
+ * site[locale]._t.menu.top
+ */
+for (lang of site.langs) {
+    site[lang.id] = {
+        menu: require(`./l10n/menu_${lang.id}.json`),
+        _t: require(`./l10n/messages_${lang.id}.json`)
+    }
+}
 
 if (process.env.WEB_ROOT_URL) {
     site.rootUrl = process.env.WEB_ROOT_URL;

@@ -6,6 +6,18 @@
   <title>Redirecting according to language</title>
 </head>
 <body>
+
+<h1>Welcome to {{ site.title }}</h1>
+
+<p>{{ site.description }}</p>
+
+<p>If you are not redirected automatically, please click at the link with the langauge  of your preference:</p>
+{% for lang in site.langs %}
+<div>
+  <a href="{{ '/' + lang.id + '/' | url }}">Page in {{lang.name}}</a>
+</div>
+{% endfor %}
+
   <!-- Redirecting to according to browser language -->
   <script>
 var availableLanguages = [{% for lang in site.langs %}"{{ lang.id }}"{{ '' if loop.last else ',' }}{% endfor %}];

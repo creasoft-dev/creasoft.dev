@@ -1,4 +1,4 @@
 ---
-title: Inicio
-layout: layouts/redirect.njk
+title: Sito de CreaSoft
+layout: redirect.njk
 ---

@@ -1,6 +1,6 @@
 ---
 title: Inicio
-layout: layouts/page_with_posts_and_qna.njk
+layout: layout/page_with_posts_and_qna.njk
 
 disableComments: true
 
@@ -13,12 +13,12 @@ pagination:
 description: CreaSoft.dev - Sitio para divulgar conocimientos de programacion.
 keywords: desarrollo, programacion, web, Java, JavaScript, TypeScript, contenedores, docker, kubernetes
 ---
-<div 
+<div
     style="background-image:
-           url('/images/humaaans.png'); 
+           url('/images/humaaans.png');
     height:250px;
     background-repeat: no-repeat;
-    background-size: 50%; 
+    background-size: 50%;
     background-position:center;">&nbsp;</div>
 
 # ¿Está en el negocio de crear soluciones con software?

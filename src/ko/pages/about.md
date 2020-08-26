@@ -1,6 +1,6 @@
 ---
 title: 소개
-layout: layouts/page_with_team.njk
+layout: layout/page_with_team.njk
 ---
 
 # 저희는

@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: layouts/page_with_posts.njk
+layout: layout/page_with_posts.njk
 
 disableComments: true
 
@@ -13,14 +13,14 @@ pagination:
 description: Developer's knowledge sharing site.
 keywords: Development, programming, Java, JavaScript, TypeScript, Python, HTML, CSS
 ---
-<div 
+<div
     style="background-image:
-           url('/images/humaaans.png'); 
+           url('/images/humaaans.png');
     height:250px;
     background-repeat: no-repeat;
-    background-size: 50%; 
+    background-size: 50%;
     background-position:bottom;">&nbsp;</div>
-    
+
 # Are you in the business of creating software?
 
 Come join us. Be part of the community that shares knowledge.

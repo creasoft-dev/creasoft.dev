@@ -1,6 +1,6 @@
 ---
 title: A Cerca
-layout: layouts/page_with_team.njk
+layout: layout/page_with_team.njk
 ---
 
 # Quienes somos?

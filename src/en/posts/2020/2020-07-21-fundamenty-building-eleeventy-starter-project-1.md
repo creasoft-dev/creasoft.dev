@@ -230,7 +230,7 @@ Each language directory includes corresponding data file, with two entries: layo
 
 ```json
 {
-    "layout": "/layouts/base.njk",
+    "layout": "/layout/base.njk",
     "locale": "en"
 }
 ```

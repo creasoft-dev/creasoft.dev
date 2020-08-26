@@ -13,24 +13,24 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy('src/js');
     eleventyConfig.addPassthroughCopy('src/images');
 
-     // Filters
-     Object.keys(filters).forEach((filterName) => {
+    // Filters
+    Object.keys(filters).forEach((filterName) => {
         eleventyConfig.addFilter(filterName, filters[filterName])
     })
 
     // For each language, create collection of posts with given language
+    const localizedCollections = ['post', 'qna'];
     site.langs.map(langEntry => {
-        eleventyConfig.addCollection(`posts_${langEntry.id}`, function(collectionApi) {
-            return collectionApi.getFilteredByTag("post").filter(function(item) {
-                return item.data.locale === langEntry.id
-            });
-        });
 
-        eleventyConfig.addCollection(`qnas_${langEntry.id}`, function(collectionApi) {
-            return collectionApi.getFilteredByTag("qna").filter(function(item) {
-                return item.data.locale === langEntry.id
+        for (const localizedCollection of localizedCollections) {
+            // Produces collection with the pluralized name + '_' + locale,
+            // E.g.: 'posts_en'
+            eleventyConfig.addCollection(`${localizedCollection}s_${langEntry.id}`, function (collectionApi) {
+                return collectionApi.getFilteredByTag(localizedCollection).filter(function (item) {
+                    return item.data.locale === langEntry.id
+                });
             });
-        });
+        }
     });
 
 

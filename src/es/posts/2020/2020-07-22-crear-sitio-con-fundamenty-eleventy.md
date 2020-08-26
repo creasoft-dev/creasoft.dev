@@ -11,7 +11,7 @@ keywords: ["website", "gitlab"]
 imageUrl: https://fundamenty.netlify.app/images/background.jpg
 ---
 
-En el artículo anterior tocamos el tema de JAMStack (Java, API, Markup), Static Site Generator (SSG) y sus ventajas. 
+En el artículo anterior tocamos el tema de JAMStack (Java, API, Markup), Static Site Generator (SSG) y sus ventajas.
 
 En este artículo explicaremos como crear un sitio web utilizando [Fundamenty](https://creasoft-dev.github.io/fundamenty/en/), el proyecto de generación de sitio estático (SSG) web basado en una herramienta llamada [Eleventy](https://www.11ty.dev/).
 
@@ -19,7 +19,7 @@ Fundamenty es un proyecto creado por nosotros que provee las siguientes caracter
 
 
 
-1. Soporte de multilenguas 
+1. Soporte de multilenguas
 2. Integración con motor de busqueda Algolia (autocomplete).
 3. Google Analytics.
 4. Funcionalidad de editar en GitLab/GitHub.
@@ -31,7 +31,7 @@ Fundamenty es un proyecto creado por nosotros que provee las siguientes caracter
 
 ## Pre-requisitos
 
-Asumiendo que  si usted tiene acceso al internet, pues está leyendo esta página web, el único  requisito es tener instalado [nodejs](https://nodejs.org/en/) en su computadora. 
+Asumiendo que  si usted tiene acceso al internet, pues está leyendo esta página web, el único  requisito es tener instalado [nodejs](https://nodejs.org/en/) en su computadora.
 
 Si desea publicar el sitio en internet, GitLab Pages, también es necesario [git](https://git-scm.com/).
 
@@ -77,7 +77,7 @@ Si la instalación fue exitosa, usted verá un mensaje similar a lo siguiente:
 
 Esto significa que el servidor esta corriendo y la sitio web está listo para ser accedido localmente.
 
-Abra con su navegador la dirección: [http://localhost:8080/](http://localhost:8080/) 
+Abra con su navegador la dirección: [http://localhost:8080/](http://localhost:8080/)
 
 Si puede ver una página como siguiente, estamos en buen camino.
 
@@ -99,7 +99,7 @@ Abra con un editor el archivo package.json, y modifique los siguientes valores:
     "version": "0.0.2",
     "author": "SU_NOMBRE",
     "repository": "",
-… 
+…
 El resto lo deja intacto
 }
 ```
@@ -125,12 +125,12 @@ langs:
   - id: ko
     name: Korean
 
-ALGOLIA_APP_ID: 
-ALGOLIA_INDEX_NAME: 
-ALGOLIA_SEARCH_API_KEY: 
-ALGOLIA_ADMIN_API_KEY: 
-GOOGLE_TAG_ID: 
-DISQUS_SITE_NAME: 
+ALGOLIA_APP_ID:
+ALGOLIA_INDEX_NAME:
+ALGOLIA_SEARCH_API_KEY:
+ALGOLIA_ADMIN_API_KEY:
+GOOGLE_TAG_ID:
+DISQUS_SITE_NAME:
 ```
 
 
@@ -160,7 +160,7 @@ Los dos sub-directorios son convenciones cuales usted puede cambiar si desea. Lo
 
 ```json
 {
-    "layout": "layouts/post.njk",
+    "layout": "layout/post.njk",
     "tags": ["post"]
 }
 ```
@@ -179,7 +179,7 @@ date: 2020-07-27
 
 # Esta es una página Markdown
 
-Usted podrá encontrar más detalle sobre el sintaxis 
+Usted podrá encontrar más detalle sobre el sintaxis
 de Mardown en [este enlace](https://markdown.es/sintaxis-markdown/)
 ```
 
@@ -231,11 +231,11 @@ Por ejemplo, `es/posts/mi-primer-articulo.md` ejecuta el procesador de Markdown 
 <p>Hurra! Mi primer artículo en Fundamenty!</p>
 ```
 
-Pero como en `es/posts/posts.json` está indicando que use el layout `layouts/post.njk` ejecutará el motor de plantilla en ella y unirá con el HTML generado del `mi-primer-articulo.md`
+Pero como en `es/posts/posts.json` está indicando que use el layout `layout/post.njk` ejecutará el motor de plantilla en ella y unirá con el HTML generado del `mi-primer-articulo.md`
 
 Asi el Eleventy genera archivos HTML para cada uno de los archivos fuentes y los deposita en el directorio `./_site`.
 
-En fin, para cambiar el diseño, lo que hay que hacer es modificar los archivos dentro del `./src/_includes/layouts/`. La plantilla base es `base.njk`
+En fin, para cambiar el diseño, lo que hay que hacer es modificar los archivos dentro del `./src/_includes/layout/`. La plantilla base es `base.njk`
 
 
 ## Instalando en GitLab
@@ -250,10 +250,10 @@ Para crear repositorio en **GitLab**:
 2. En la página principal, presione el boton verde *New Project*
 3. Seleccione *Create Blank Project*
 4. Llene el formulario del proyecto
-    1. Project name: &lt;El nombre del proyecto>, 
-    2. Project URL: 
+    1. Project name: &lt;El nombre del proyecto>,
+    2. Project URL:
     3. Project slug: &lt;al introducir el nombre, automaticamente se llenará esta parte>
-    4. Seleccione Public para el **Visibility Level** 
+    4. Seleccione Public para el **Visibility Level**
     5. NO chequee la opción **Initialize repository with a README**
     6. Y luego presione el botón **Create Project**
 5. Cuando muestre la pantalla, seguiremos la instrucción del **Push an existing folder** para inicializar y subir el sitio
@@ -317,4 +317,4 @@ Siga las instrucciones aqui: [https://docs.gitlab.com/ee/ssh/#ed25519-ssh-keys](
 *   Despues de subir a GitLab, la pagina no me muestra
     *   Toma aproximadamente 30 mins para que GitLab configure el DNS interno para mappear la pagina.
 *   Aun despues de 30 mins, GitLab me muestra error 404 (Pagina No Encontrada).
-    *   Verifique que el valor del `WEB_PATH_PREFIX` en el Setting de CI/CD este correcto. 
+    *   Verifique que el valor del `WEB_PATH_PREFIX` en el Setting de CI/CD este correcto.

@@ -1,6 +1,6 @@
 ---
 title: Preguntas y Respuestas
-layout: layouts/page_with_posts.njk
+layout: layout/page_with_posts.njk
 
 pagination:
   data: collections.qna

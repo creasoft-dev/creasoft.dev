@@ -1,6 +1,6 @@
 ---
 title: About
-layout: layouts/page_with_team.njk
+layout: layout/page_with_team.njk
 ---
 
 # Who we are?
