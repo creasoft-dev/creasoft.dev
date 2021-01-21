@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head profile="http://www.w3.org/2005/10/profile">
+    
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172830615-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172830615-1');
+      </script>
+    
+    <title>Ionic React App with Social Login - CreaSoft.dev</title>
+    <meta name="description" content="A PoC on Ionic Reaact app integrating with Social Login for authentication">
+    <meta name="keywords" content="ionic, mobile, react, auth">
+    <link rel="icon" type="image/png" href="/images/creasoft.dev-logo.ico">
+    <link rel="stylesheet" type="text/css" href="/assets/main.css"/>
+    <link href="https://unpkg.com/prismjs@1.21.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="header" class="fixed w-full z-10 top-0 bg-gray-100 border-b border-gray-400 shadow-md">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4  ">
+        <div class="pl-4 flex items-center">
+          <image src="/images/CreaSoft.dev-logo.png" alt="Logo" class="h-5 mr-1"/>
+          <a  href="/ " class="text-gray-900 no-underline hover:no-underline font-extrabold text-xl" >
+            CreaSoft.dev
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
+          <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
+          
+            <div class="relative pull-right pl-4 pr-4 md:pr-0">
+              <input id="searchbox" type="search" placeholder="Search" class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-purple-500 rounded py-1 px-2 pl-10 appearance-none leading-normal">
+              <div class="absolute search-icon" style="top: 0.375rem;left: 1.75rem;">
+                <img src="/images/algolia-blue-mark.png" class="h-5"/>
+              </div>
+            </div>
+          
+          </div>
+          <ul class="list-reset lg:flex justify-end items-center list-none text-sm">
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/en/pages/about" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class=" fill-current "></i>About</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/en/pages/partnership" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class=" fill-current "></i>Partnership</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="/en/pages/articles" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class=" fill-current "></i>Articles</a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://github.com/creasoft-dev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-git fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="">
+                <a href="https://twitter.com/creasoftdev" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-twitter fill-current "></i></a>
+              </li>
+            
+              <li class="mr-3 py-2 lg:py-0" title="Empoderemos Más">
+                <a href="https://www.youtube.com/channel/UCW3h5kacfHTE74Ta2WScMMw" class="inline-block py-2 px-2 text-gray-900 font-bold no-underline hover:text-indigo-600">
+                  <i class="fab fa-youtube fill-current "></i>E+</a>
+              </li>
+            
+          </ul>
+
+          <ul class="list-reset lg:flex justify-end items-center list-none">
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/es" class="inline-block text-xs text-gray-600 no-underline">Español</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/en" class="inline-block text-xs text-gray-600 no-underline">English</a>
+              </li>
+            
+              <li class="bg-red mr-3 py-2 lg:py-0">
+                <a href="/ko" class="inline-block text-xs text-gray-600 no-underline">한국어</a>
+              </li>
+            
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+      <div class="content w-full">
+        <h1>Ionic React App with Social Login</h1>
+<p class="content-center">Published on: Jan 20, 2021, by  Young-Suk Ahn Park</p>
+
+
+
+
+<div class="w-auto">
+        <div class="h-64" style="background-image:
+            url('/images/posts/2021/2020-01-20-ionic-react-social-login-poc.jpg');
+        width:100%;
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover">&nbsp;</div>
+    
+</div>
+
+
+
+<h2>Introduction</h2>
+<p>Developing (learning to develop) a mobile app was on my list for several years. I was too lazy to learn a new language (Objective C) and Android Java development seemed a little convoluted. Then came the hybrid model (basically Cordova), and  new language or iOS (Swift), and different other languages and frameworks: Xamarin, NativeScript, Flutter, ReactNative, Ionic.</p>
+<p>Now that Ionic supports React and has a novel way of deploying on mobile - Capacitor. I finally decided to give it a try.</p>
+<p>My first order concern was Social Login. If I am to build an app, I want to lower the barrier of entry by allowing them to login with popular social platforms.</p>
+<p>I have built web applications that used social login using OpenID Connect (OIDC) specification, using the OAuth 2.0 Authorization Code grant type. But I was not sure how that would work in a mobile environment using the hybrid model, which is basically a web app running locally on the device.</p>
+<p>So this is my write up on the Ionic React Google Login Proof of Concept (PoC) based on a demo repo I found in GitHub.</p>
+<h2>Researching the Auth Libraries</h2>
+<p>I did some research and found few libraries that can help me integrate Auth in Ionic app built with Capacitor:</p>
+<ol>
+<li>
+<p><a href="https://github.com/wi3land/ionic-appauth">ionic-appauth</a>: 35 GitHub stars.
+This repo does not have version tags. Ionic-AppAuth is an implementation of the openid’s <a href="https://github.com/openid/AppAuth-JS">AppAuth-JS</a> for Ionic development. The documentation is minimal (close to none), but  has a React sample that you can examine:  https://github.com/wi3land/ionic-appauth-react-demo</p>
+</li>
+<li>
+<p><a href="https://github.com/chemerisuk/cordova-plugin-firebase-authentication">cordova-plugin-firebase-authentication</a>: 79 GitHub stars.
+This is the project that is listed in the <a href="https://ionicframework.com/docs/native/firebase-authentication">ionicframework.com</a> site. Even though it has ‘cordoba’ in its name, it claims to be compatible with Capacitor. It uses Firebase as the auth server.</p>
+</li>
+<li>
+<p><a href="https://github.com/baumblatt/capacitor-firebase-auth">capacitor-firebase-auth</a>: 164 GiHub stars.
+Another library that uses Firebase as the Auth server.</p>
+</li>
+</ol>
+<p>The other alternative is to use Ionic’s <a href="https://ionic.io/docs/auth-connect">Auth Connect</a> which requires you to purchase the license.</p>
+<p>I ultimately decided to go for #1 - to use the <code>ionic-appauth</code> library. It is open source (no license required), and is based on standard using Oauth2 Authorization Code Grant with Proof Key for Code Exchange (PKCE), which means you have a wider option of choosing the auth server providers.</p>
+<p>The rest of the article gives a quick instruction on how to configure and run the <code>ionic-appauth</code> Demo App with Okta and Google Login.</p>
+<h2>The <code>ionic-appauth</code> Demo App</h2>
+<h3>Setting Up the Auth Server &amp; Configuring the App</h3>
+<p>As I previously mentioned, React is my framework of choice. Thankfully I found a <a href="https://github.com/wi3land/ionic-appauth-react-demo">Ionic React AppAuh demo app</a> in GitHub which facilitated my PoC.</p>
+<p>Sadly the demo doesn’t come with any documentation, not even README, so I had to analyze the code. Fortunately the codebase is simple. I found that the auth related configurations are set in the src/services/AuthService.ts file.</p>
+<p>I just needed to modify the values in the authConfig:</p>
+<pre class="language-javascript"><code class="language-javascript">authService<span class="token punctuation">.</span>authConfig <span class="token operator">=</span> <span class="token punctuation">{</span><br>      client_id<span class="token operator">:</span> <span class="token string">'appauth'</span><span class="token punctuation">,</span> <span class="token comment">// AHA! These are the values I need to change</span><br>      server_host<span class="token operator">:</span> <span class="token string">'http://localhost:5200'</span><span class="token punctuation">,</span><br>      redirect_url<span class="token operator">:</span> <span class="token function">isPlatform</span><span class="token punctuation">(</span><span class="token string">'capacitor'</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">'com.appauth.demo://callback'</span> <span class="token operator">:</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>origin <span class="token operator">+</span> <span class="token string">'/loginredirect'</span><span class="token punctuation">,</span><br>      end_session_redirect_url<span class="token operator">:</span> <span class="token function">isPlatform</span><span class="token punctuation">(</span><span class="token string">'capacitor'</span><span class="token punctuation">)</span> <span class="token operator">?</span>  <span class="token string">'com.appauth.demo://endSession'</span> <span class="token operator">:</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>origin <span class="token operator">+</span> <span class="token string">'/endredirect'</span><span class="token punctuation">,</span><br>      scopes<span class="token operator">:</span> <span class="token string">'openid offline_access'</span><span class="token punctuation">,</span><br>      pkce<span class="token operator">:</span> <span class="token boolean">true</span><br>    <span class="token punctuation">}</span></code></pre>
+<p>I used Okta as the Auth Server. The free developer account was sufficient to run the Demo. You can create one at https://developer.okta.com.</p>
+<p>A quick summary of setting up Okta is as follows:</p>
+<ol>
+<li>Go to &quot;Application&quot; and click the &quot;Add Application&quot; button.</li>
+<li>Select Single-Page App and fill in the form. The most important fields are:</li>
+</ol>
+<ul>
+<li>In the Login Redirect URI enter: http://localhost:8100/loginredirect and com.appauth.demo://callback</li>
+<li>In the Login Redirect URI enter: http://localhost:8100/endredirect and com.appauth.demo://endSession
+The first uri is for web, the second is for the mobile native (e.g. capacitor)</li>
+</ul>
+<p>Since the title of this article is about Social Login, we will add federated Google login.
+In Okta,</p>
+<ol>
+<li>Go to “Users” -&gt; “Social &amp; Identity Providers”</li>
+<li>Click on Add Identity Provide and select &quot;Google&quot;</li>
+<li>Give the IdP a name and copy paste the Client ID and Client Secret from <a href="https://console.developers.google.com/">Google Dev Console</a>.</li>
+<li>The scopes should be <code>email, openid, profile</code></li>
+<li>Once the Google IdP is successfully added, you will see an entry in the list. Click the dark circle icon to the left of the name</li>
+<li>You will need the IdP ID for configuring your Ionic application.</li>
+</ol>
+<p>Now in the code, modify the config in <code>src/services/AuthService.ts</code> replacing  the <code>client_id</code> and <code>server_host</code> accordingly. FYI, the <code>server_host</code> is <code>https://{okta domain}</code> e.g.:  https://dev-XYZ.okta.com</p>
+<p>Finally, for the demo app to connect with Google IdP through Okta, you must send extra parameters in the authService.signIn() method:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">handleSignIn</span><span class="token punctuation">(</span><span class="token parameter">e <span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>        Auth<span class="token punctuation">.</span>Instance<span class="token punctuation">.</span><span class="token function">signIn</span><span class="token punctuation">(</span><span class="token punctuation">{</span> idp<span class="token operator">:</span> <span class="token string">'your-idp'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>Initially I used Auth0 as my Auth server but learned that the OIDC well-known endpoint returns metadata with missing <code>end_session_endpoint</code> attribute. This caused the app to fail when I clicked the “Sign Out” Button.</p>
+</blockquote>
+<h3>Running the App</h3>
+<p>Now that it is properly configured you can run the application locally as web app:</p>
+<pre class="language-shell"><code class="language-shell">$ ionic serve</code></pre>
+<p>The browser will open with the app:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/f1zyqyodmuhhslb0pu8z.png" alt="web-ionic-1-landing"></p>
+<p>And when you click on &quot;Sign In&quot; button, it will take you to the Google Login form:
+<img src="https://dev-to-uploads.s3.amazonaws.com/i/7l4xxiod44mfcd3qoc9g.png" alt="web-ionic-2-userid"></p>
+<p>Once successfully logged in, you should be able to get the user details:
+<img src="https://dev-to-uploads.s3.amazonaws.com/i/vj6i5l3svniuve67qryy.png" alt="web-ionic-5-user-details"></p>
+<h3>Running the Mobile App</h3>
+<p>We are not done yet. Now we are going to proceed to deploy to mobile using Capacitor.</p>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># Build the code (each time original source changes)</span><br>$ ionic build<br><br><span class="token comment"># Copy the asset to the android project (after each ionic build)</span><br>$ ionic cap copy <br><br><span class="token comment"># Synchronize project by copying changes to android platform (When new plugins were added)</span><br>$ ionic cap <span class="token function">sync</span><br><br><span class="token comment"># Open the android studio</span><br>$ ionic cap <span class="token function">open</span> android</code></pre>
+<p>Assuming you have Android Studio, the last command will open the Android Studio(AS), an IDE based on IntelliJ.
+From AS, select the preferred device (simulator) - any Pixel should be fine - and press the play button.
+Once the device simulator shows up, press the &quot;on&quot; button to turn it on. Wait about a minute until the app is loaded on the screen.</p>
+<h2>Conclusion</h2>
+<p>Here I have demonstrated that it is possible to integrate Ionic React mobile app with social login - in this case Google.</p>
+<p>The demo repo <code>https://github.com/wi3land/ionic-appauth-react-demo</code> uses an older version of <code>ionic-appauth</code>, new never version has few braking changes in the API.</p>
+<p>I have forked the project and made some minor changes including upgrading the <code>ionic-appauth</code> version to the latest and externalizing the configuration to <code>.env</code> file.</p>
+<p>You can check my forked project with the improvements: <a href="https://github.com/creasoft-dev/ionic-appauth-react-demo">https://github.com/creasoft-dev/ionic-appauth-react-demo</a>.</p>
+<p>Now that I have completed the PoC on authentication, my next step is to start building my real app.</p>
+<p>I will post my learnings on building a mobile app using Ionic React + Redux + Redux Toolkit.</p>
+
+
+
+<hr />
+<p class="content-center">Published on: Jan 20, 2021, by  Young-Suk Ahn Park</p>
+
+<a href="https://gitlab.com/creasoft-dev/creasoft.dev/edit/master/./src/en/posts/2021/2020-01-20-ionic-react-social-login-poc.md">Edit on Git</a>
+
+
+      </div>
+      
+      <div class="content w-full">
+        <div id="disqus_thread"></div>
+      </div>
+      
+    </div>
+
+    <footer class="w-full bg-gray-100 mt-6 p-2 border-t-1 border-gray-300">
+      <div <div class="w-full container mx-auto flex flex-wrap items-center justify-center ">
+        <div >
+          Based on <a href="https://github.com/creasoft-dev/fundamenty">Fundamenty</a> by <a href="https://creasoft.dev/">CreaSoft.dev</a>,
+          powered by <a href="https://www.11ty.dev/" >Eleventy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/main.js"></script>
+
+    <script>
+
+      /* https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8 */
+      /* Toggle dropdown list */
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      var helpMenuDiv = document.getElementById("menu-content");
+      var helpMenu = document.getElementById("menu-toggle");
+
+      document.onclick = check;
+
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              navMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+        //Help Menu
+        if (!checkParent(target, helpMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, helpMenu)) {
+            // click on the link
+            if (helpMenuDiv.classList.contains("hidden")) {
+              helpMenuDiv
+                .classList
+                .remove("hidden");
+            } else {
+              helpMenuDiv
+                .classList
+                .add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            helpMenuDiv
+              .classList
+              .add("hidden");
+          }
+        }
+
+      }
+
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+
+/**
+ * Disqus
+ */
+var disqus_config = function () {
+this.language = "en";
+this.page.title = 'Ionic React App with Social Login';
+this.page.url = 'https://creasoft-dev.github.io//en/posts/2021/2020-01-20-ionic-react-social-login-poc/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'ionic-react-social-login-poc'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://creasoft-dev.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+
+    </script>
+  </body>
+</html>
